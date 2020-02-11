@@ -1,0 +1,89 @@
+.top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1.5rem 0
+  color: $text-color
+
+  &__logo
+    display: flex
+    align-items: center
+
+  &__logo-img
+    margin-right: 2rem
+
+  &__logo-text
+    max-width: 22rem
+    font-size: 1.4rem
+    color: $active-color
+
+  &__btn
+    position: relative
+    max-width: 17rem
+    text-align: left
+    font-weight: bold
+    text-transform: uppercase
+    color: #55a831
+    background-color: transparent
+    padding: 1.3rem 1.5rem 1.3rem 6rem
+    border: 0.2rem solid #55a831
+    border-radius: 1rem
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 1.5rem
+      display: inline-block
+      width: 3rem
+      height: 3rem
+      background-image: url(../img/top/measure.svg)
+      background-size: contain
+      transform: translateY(-50%)
+
+
+  &__working-hours
+    position: relative
+    text-transform: lowercase
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -4rem
+      display: inline-block
+      width: 3rem
+      height: 3rem
+      background-image: url(../img/top/clock.svg)
+      background-size: contain
+      transform: translateY(-50%)
+
+
+    span
+      display: block
+      font-size: 1.8rem
+      font-weight: bold
+
+  &__number
+    position: relative
+    font-size: 2.3rem
+    font-weight: bold
+    text-align: right
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0.5rem 
+      left: -3rem
+      display: inline-block
+      width: 2rem
+      height: 2rem
+      background-image: url(../img/top/phone-call.svg)
+      background-size: contain
+
+    a
+      display: block
+      font-size: 1.5rem
+      font-weight: normal
+      color: $active-color
+      margin-top: 1rem

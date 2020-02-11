@@ -1,0 +1,72 @@
+.title-page
+  background-color: #525252
+  background-image: url(../img/title-page/bg.jpg)
+  background-position: center
+  background-size: cover
+
+  &__body
+    display: flex
+    justify-content: space-between
+    padding: 11rem 0
+
+  &__text
+    font-size: 2.6rem
+    font-weight: bold
+    color: $text-color
+    margin-bottom: 15rem
+
+    span
+      display: block
+      font-size: 5.5rem
+      margin-top: 2rem
+
+  &__form
+    display: flex
+    align-items: center
+
+  &__features
+    display: flex
+    list-style: none
+
+  &__feature
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 11rem
+    height: 11rem
+    background-color: $active-color
+    border-radius: 50%
+    margin-right: 2rem
+
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: -1.5rem
+      display: inline-block
+      width: 5rem
+      height: 5rem
+      background-image: url(../img/title-page/quality.png)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      transform: translateX(-50%)
+
+    p
+      text-align: center
+      font-weight: bold
+      text-transform: uppercase
+      color: #fff
+      font-stretch: condensed;
+      transform: translateY(15%) rotateY(38deg)
+
+  &__feature_time::before
+    left: 47%
+    background-image: url(../img/title-page/time.png)
+
+  &__feature_calendar::before
+    background-image: url(../img/title-page/calendar.png)
+  
+  &__feature_truk::before
+    background-image: url(../img/title-page/truck.png)
