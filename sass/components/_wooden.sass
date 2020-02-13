@@ -1,0 +1,90 @@
+.wooden
+  display: flex
+  justify-content: space-around
+
+  &__item
+    flex-basis: 50%
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    padding: 3rem 6rem
+    border-top: 0.5rem solid #000
+    background-image: linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.1))
+
+    &::before
+      content: ''
+      position: absolute
+      top: -0.35rem
+      left: 50%
+      display: inline-block
+      width: 0.7rem
+      height: 0.7rem
+      background-color: #000
+      transform: translateX(-50%) rotate(45deg)
+      z-index: -1
+
+  &__item_cold
+    border-color: $cold
+    background-image: linear-gradient(to top, transparent 50%, rgba(36, 152, 230, 0.1))
+
+    &::before
+      background-color: $cold
+
+  &__item_warm
+    border-color: $warm
+    background-image: linear-gradient(to top, transparent 50%, rgba(255, 184, 3, 0.1))
+
+    &::before
+      background-color: $warm
+
+  &__title
+    text-align: center
+    font-size: 2rem
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 3rem
+
+  &__title_cold
+    color: $cold
+
+  &__title_warm
+    color: $warm
+
+  &__img
+    margin-bottom: 3rem
+
+  &__list
+    min-height: 16rem
+    font-size: 1.4rem
+    padding-left: 4rem
+
+    li
+      position: relative
+      margin-bottom: 1rem
+      
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: -4rem 
+        display: inline-block
+        width: 2.5rem
+        height: 2.5rem
+        background-image: url(../img/checked.svg)
+        background-size: contain
+        transform: translateY(-50%)
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__price
+
+    span
+      display: block
+      font-size: 2rem
+      font-weight: bold
+
+  &__btn
+    height: 6rem

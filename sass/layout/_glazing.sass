@@ -1,0 +1,27 @@
+.glazing
+  display: flex
+  flex-direction: column
+  padding: 8rem 0 12rem
+
+  &__title
+    position: relative
+    text-align: center
+    font-size: 3rem
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 10rem
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -2rem
+      left: 50%
+      display: inline-block
+      width: 12rem
+      height: 0.5rem
+      background-color: #00f
+      border-radius: 50%
+      transform: translateX(-50%) rotateX(57deg)
+
+  &__tabs
+    margin-bottom: 4rem
