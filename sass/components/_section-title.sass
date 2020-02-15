@@ -1,0 +1,24 @@
+.section-title
+  position: relative
+  text-align: center
+  font-size: 3rem
+  font-weight: bold
+  text-transform: uppercase
+  margin-bottom: 10rem
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: -2rem
+    left: 50%
+    display: inline-block
+    width: 14rem
+    height: 0.2rem
+    background: linear-gradient(90deg, transparent 0%, $active-color 50%, transparent 100%)
+    transform: translateX(-50%)
+
+  &_white
+    color: #fff
+
+    &::after
+      background: linear-gradient(90deg, transparent 0%, #ffffff 50%, transparent 100%)

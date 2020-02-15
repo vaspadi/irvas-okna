@@ -1,0 +1,28 @@
+.interior
+  display: flex
+  justify-content: space-between
+
+  &__list
+    display: flex
+    flex-flow: row wrap
+    align-content: space-between
+    padding: 0 2rem 
+
+  &__item
+    flex-basis: 33%
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    text-align: center
+
+  &__title
+    min-height: 4rem
+
+  &__text
+    font-size: 1.3rem
+
+    span
+      display: block
+      font-size: 1.5rem
+      font-weight: bold
+      color: $active-color

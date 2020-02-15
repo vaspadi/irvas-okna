@@ -1,2 +1,53 @@
 .finishing
-  background-color: $gray
+  background-color: #f7f7f7
+  padding: 7rem 0
+
+  &__body
+    display: flex
+    flex-flow: column nowrap
+
+  &__tabs
+    display: flex
+    height: 9rem
+    font-size: 1.6rem
+    text-transform: uppercase
+    margin-bottom: 5rem
+    cursor: pointer
+
+  &__tab 
+    flex-basis: 25%
+    display: flex
+    justify-content: center
+    align-items: center
+    border-right: 0.15rem solid lighten($gray, 10%)
+
+    &:last-child
+      border: none
+
+  &__tab_active
+    position: relative
+    background-image: linear-gradient(to top, transparent, lighten($gray, 8%))
+    padding-bottom: 1rem
+    border-top: 1rem solid $active-color
+
+    &::before
+      content: ''
+      position: absolute
+      top: -0.8rem
+      left: 50%
+      display: inline-block
+      border: 0.8rem solid transparent
+      border-bottom-color: $active-color
+      border-right-color: $active-color
+      transform: translateX(-50%) rotate(45deg)
+
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__content
+
+
+  &__form
+    flex-shrink: 0
