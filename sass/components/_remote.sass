@@ -1,0 +1,47 @@
+.remote
+  display: flex
+  align-items: center
+
+  &__preview
+    margin-right: 5rem
+
+  &__list
+    display: flex
+    flex-flow: column nowrap
+
+  &__text
+    font-weight: bold
+    margin-bottom: 3rem
+
+  &__item
+    position: relative
+    max-width: 13rem
+    font-size: 1.2rem
+    font-weight: bold
+    margin-left: 7rem
+    margin-bottom: 2.2rem
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -7rem
+      display: none
+      width: 4rem
+      height: 3rem
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      transform: translateY(-50%)
+
+  &__item_arrow::before
+    display: inline-block
+    background-image: url(../img/remote/double-arrow.svg)
+
+  &__item_still::before
+    display: inline-block
+    background-image: url(../img/remote/still.png)
+
+  &__item_thermometr::before
+    display: inline-block
+    background-image: url(../img/remote/thermometr.svg)

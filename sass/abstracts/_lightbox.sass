@@ -1,0 +1,27 @@
+.lightbox
+  position: fixed
+  top: -10rem
+  right: -10rem
+  bottom: -10rem
+  left: -10rem
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba($active-color, 0.5)
+  cursor: pointer
+  z-index: 100
+
+  &__img
+    position: relative
+    max-width: 85vw
+    max-height: 85vh
+    border-radius: 1rem
+
+    &::before
+      content: ''
+      position: absolute
+      top: -4rem
+      left: -4rem
+      bottom: -4rem
+      left: -4rem
+      background-color: #fff

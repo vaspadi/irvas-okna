@@ -3,8 +3,19 @@
   height: 8rem
   font-size: 2rem
   font-weight: bold
+  text-transform: uppercase
   background-image: linear-gradient(to top, #ffb400, #ffed26)
   border: solid 1px #ffc600
   border-radius: 1rem
-  box-shadow: 0px 2px 20px 0 #ff990066
+  box-shadow: 0rem 0.2rem 2rem 0 #ff990066
   cursor: pointer
+
+  span
+    display: block
+    transform: rotateY(45deg)
+
+  &:focus,
+  &:hover
+    box-shadow: 0rem 0.2rem 2rem #ff9900
+    transition: all 0.3s
+    outline: none

@@ -9,7 +9,9 @@
     flex-flow: column nowrap
     padding: 3rem 6rem
     border-top: 0.5rem solid #000
+    background-color: #fff
     background-image: linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.1))
+    transition: all 0.3s
 
     &::before
       content: ''
@@ -22,6 +24,10 @@
       background-color: #000
       transform: translateX(-50%) rotate(45deg)
       z-index: -1
+
+    &:hover
+      transform: scale(1.02)
+      z-index: 10
 
   &__item_cold
     border-color: $cold
@@ -87,4 +93,4 @@
       font-weight: bold
 
   &__btn
-    height: 6rem
+    height: 6.5rem

@@ -1,6 +1,44 @@
 .countdown
-  display: inline-block
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  text-align: center
   width: 26rem
   height: 16rem
+  font-weight: bold
   background-color: #fff
+  padding: 2rem
+  border: 0.1rem solid $gray
   border-radius: 1rem
+  transition: all 0.3s
+
+  &:hover
+    transform: scale(1.02)
+    z-index: 10
+
+  &__title
+    text-transform: uppercase
+
+  &__list
+    display: flex
+    justify-content: space-between
+
+  &__item
+    display: flex
+    flex-flow: column nowrap
+
+  &__num
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 3rem
+    color: #fff
+    background-color: #000
+    transform: rotateY(40deg)
+    padding: 0.5rem 1rem  
+    border-radius: 1rem
+    margin-bottom: 1rem
+
+  &__text
+    font-size: 1.3rem
+    text-transform: lowercase

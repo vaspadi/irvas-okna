@@ -1,4 +1,5 @@
 .form
+  position: relative
   display: flex
   flex-direction: column
   justify-content: space-around  
@@ -15,18 +16,40 @@
     font-weight: bold
 
     span
+      display: block
       font-size: 2.4rem
       text-transform: uppercase
 
   &__input
     width: 27rem
     height: 6rem
+    font-size: 2rem
+    color: $gray
     text-align: center
-    // color: $gray
     padding: 2.3rem 0
     border: 0.1rem solid $gray
     border-radius: 1rem
+
+
+    &::placeholder
+      font-size: 1.5rem
+
+    &:focus
+      color: #000
+      outline: none
+      border-color: #000
+
+    &:hover
+      border-color: #000
+
   
   &__comment
     font-size: 1.1rem
     color: $gray
+
+.form_scale
+  transition: all 0.3s
+
+  &:hover
+    transform: scale(1.02)
+    z-index: 10

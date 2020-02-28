@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b1ca462e-0ff0-47eb-bbd7-5c3ecb1965b9&lang=ru_RU" type="text/javascript"></script>
   <title>Ирвас</title>
 </head>
 <body>
@@ -11,18 +12,21 @@
     <div class="container">
       <div class="top">
         <div class="top__logo">
-          <img class="top__logo-img" src="img/logo.png" alt="Ирвас">
-          <p class="top__logo-text">Остекление балконов и лоджий в Москве и Московской области</p>
+          <a class="logo" href="#">
+            <img class="logo__img" src="img/logo.png" alt="Ирвас">
+          </a>
+  
+          <p class="top__text">Остекление балконов и лоджий в Москве и Московской области</p>
         </div>
   
-        <button class="top__btn">Вызвать замерщика</button>
+        <button class="top__btn callback-btn">Вызвать замерщика</button>
   
         <p class="top__working-hours">Без выходных
           <span>9:00 - 18:00</span>
         </p>
   
         <p class="top__number">+7 (495) 646-61-71
-          <a href="tel:+74956466171">Заказать обратный звонок</a>
+          <button class="callback-btn top__callback">Заказать обратный звонок</button>
         </p>
       </div>
       <!-- /.top -->
@@ -53,19 +57,17 @@
             </ul>
           </div>
     
-          <div class="title-page__form">
-            <form class="form" action="#">
-              <p class="form__text">Запишитесь сегодня на
-                <span>бесплатный замер</span>
-              </p>
-    
-              <input class="form__input" type="text" placeholder="Введите ваше имя">
-              <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
-              <input class="btn" type="submit" value="Вызвать замерщика!">
-    
-              <p class="form__comment">Ваши данные конфиденциальны</p>
-            </form>
-          </div>
+          <form class="form form_scale" action="#">
+            <p class="form__text">Запишитесь сегодня на
+              <span>бесплатный замер</span>
+            </p>
+  
+            <input class="form__input" type="text" placeholder="Введите ваше имя">
+            <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
+            <button class="btn callback-btn"><span>Вызвать замерщика!</span></button>
+  
+            <p class="form__comment">Ваши данные конфиденциальны</p>
+          </form>
         </div>
         <!-- /.title-page__body -->
       </div>
@@ -82,33 +84,33 @@
       <ul class="glazing-tabs glazing__tabs">
         <li class="glazing-tabs__item">
           <img class="glazing-tabs__img" src="img/glazing-tabs/wooden.jpg" alt="Окно с деревянными рамками">
-          <h3 class="glazing-tabs__title">Деревянное остекление</h3>
+          <button class="glazing-tabs__btn">Деревянное остекление</button>
         </li>
   
         <li class="glazing-tabs__item">
           <img class="glazing-tabs__img" src="img/glazing-tabs/aluminium.jpg" alt="Окно с алюминиевыми рамками">
-          <h3 class="glazing-tabs__title">Алюминиевое остекление</h3>
+          <button class="glazing-tabs__btn">Алюминиевое остекление</button>
         </li>
   
         <li class="glazing-tabs__item">
           <img class="glazing-tabs__img" src="img/glazing-tabs/plastic.jpg" alt="Окно с пластиковыми рамами">
-          <h3 class="glazing-tabs__title">Остекление пластиковыми рамами</h3>
+            <button class="glazing-tabs__btn">Остекление пластиковыми рамами</button>
         </li>
   
         <li class="glazing-tabs__item">
           <img class="glazing-tabs__img" src="img/glazing-tabs/franch.jpg" alt="Окно панарамным видом">
-          <h3 class="glazing-tabs__title">Французское остекление (панорамное)</h3>
+          <button class="glazing-tabs__btn">Французское остекление (панорамное)</button>
         </li>
   
         <li class="glazing-tabs__item">
           <img class="glazing-tabs__img" src="img/glazing-tabs/with-removal.jpg" alt="Окно с выносом подоконника">
-          <h3 class="glazing-tabs__title">Остекление с выносом</h3>
+          <button class="glazing-tabs__btn">Остекление с выносом</button>
         </li>
       </ul>
       <!-- /.glazing-tabs -->
   
-      <ul class="glazing-content">
-        <li class="glazing-content__item">
+      <ul class="glazing-tabs-content">
+        <li class="glazing-tabs-content__item fade">
           <ul class="wooden">
             <li class="wooden__item wooden__item_cold">
               <h4 class="wooden__title wooden__title_cold">Холодное</h4>
@@ -121,7 +123,7 @@
               </ul>
               <div class="wooden__row">
                 <p class="wooden__price"><span>2600 руб.кв.м.</span>под ключ с установкой</p>
-                <button class="btn wooden__btn">Рассчитать стоимость</button>
+                <button class="btn wooden__btn cost-btn"><span>Рассчитать стоимость</span></button>
               </div>
             </li>
   
@@ -136,14 +138,22 @@
               </ul>
               <div class="wooden__row">
                 <p class="wooden__price"><span>4000 руб.кв.м.</span>под ключ с установкой</p>
-                <button class="btn wooden__btn">Рассчитать стоимость</button>
+                <button class="btn wooden__btn cost-btn"><span>Рассчитать стоимость</span></button>
               </div>
             </li>
           </ul>
           <!-- /.wooden -->
         </li>
+
+        <li class="glazing-tabs-content__item fade">
+          <div class="tabs-error tabs-error_gray">
+            <h4 class="tabs-error__title">Внимание!</h4>
+            <p class="tabs-error__text">Сайт - учебный проект: некоторый контент отсутствует.</p>
+            <p class="tabs-error__comment">Здесь могла быть ваша реклама. :)</p>
+          </div>
+        </li>
       </ul>
-      <!-- /.glazing-content -->
+      <!-- /.glazing-tabs-content -->
     </section>
     <!-- /.glazing -->
   </div>
@@ -155,60 +165,202 @@
         <h2 class="section-title">Закажите отделку балкона со скидкой 60%!</h2>
 
         <ul class="finishing__tabs">
-          <li class="finishing__tab finishing__tab_active"><h3>Внутренняя отделка</h3></li>
-          <li class="finishing__tab"><h3>Внешняя отделка</h3></li>
-          <li class="finishing__tab"><h3>Выносное остекление</h3></li>
-          <li class="finishing__tab"><h3>Крыша на балкон</h3></li>
+          <li class="finishing__tab">
+            <button class="finishing__btn">Внутренняя отделка</button>
+          </li>
+          <li class="finishing__tab">
+            <button class="finishing__btn">Внешняя отделка</button>
+          </li>
+          <li class="finishing__tab">
+            <button class="finishing__btn">Выносное остекление</button>
+          </li>
+          <li class="finishing__tab">
+            <button class="finishing__btn">Крыша на балкон</button>
+          </li>
         </ul>
 
         <div class="finishing__row">
           <ul class="finishing__content">
-            <li class="interior">
+            <li class="interior finishing__item fade">
               <img class="interior__preview" src="img/interior/preview.jpg" alt="Пример внутренней отделки">
 
               <ul class="interior__list">
                 <li class="interior__item">
                   <img class="interior__img" src="img/interior/wooden-boards.png" alt="Пример вагонки">
                   <h4 class="interior__title">Вагонка</h4>
-                  <p class="interior__text"><span>600 руб. кв.м.</span> с материалом</p>
+                  <p class="price price_margin">
+                    <span>600 руб. кв.м.</span><br>
+                     с материалом
+                    </p>
                 </li>
 
                 <li class="interior__item">
                   <img class="interior__img" src="img/interior/plastic-boards.png" alt="Пример пластиковой вагонки">
                   <h4 class="interior__title">Пластиковая вагонка</h4>
-                  <p class="interior__text"><span>750 руб. кв.м.</span>с материалом</p>
+                  <p class="price price_margin">
+                    <span>750 руб. кв.м.</span><br>
+                    с материалом
+                  </p>
                 </li>
 
                 <li class="interior__item">
                   <img class="interior__img" src="img/interior/pvc.png" alt="Пример ПВХ-панели">
                   <h4 class="interior__title">ПВХ-панели</h4>
-                  <p class="interior__text"><span>800 руб. кв.м.</span>с материалом</p>
+                  <p class="price price_margin">
+                    <span>800 руб. кв.м.</span><br>
+                    с материалом
+                  </p>
                 </li>
 
                 <li class="interior__item">
                   <img class="interior__img" src="img/interior/laminate-flooring.png" alt="Пример настила пола из ламината">
                   <h4 class="interior__title">Настил пола из ламината</h4>
-                  <p class="interior__text"><span>1250 руб. кв.м.</span>с материалом</p>
+                  <p class="price price_margin">
+                    <span>1250 руб. кв.м.</span><br>
+                    с материалом
+                  </p>
                 </li>
 
                 <li class="interior__item">
                   <img class="interior__img" src="img/interior/wooden-flooring.png" alt="Пример настила пола из ламината">
                   <h4 class="interior__title">Настил пола из дерева</h4>
-                  <p class="interior__text"><span>1650 руб. кв.м.</span>с материалом</p>
+                  <p class="price price_margin">
+                    <span>1650 руб. кв.м.</span><br>
+                    с материалом
+                  </p>
                 </li>
               </ul>
             </li>
             <!-- /.interior -->
+
+            <li class="colors finishing__item fade">
+              <img class="colors__preview" src="img/colors/preview.jpg" alt="Виниловый сайдинг в белом цвете">
+
+              <div class="colors__content">
+                <h4 class="colors__title">Большой выбор цветов винилового сайдинга</h4>
+
+                <ul class="colors__list">
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_white"></div>
+                    <p class="colors__text">Белый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_smoky"></div>
+                    <p class="colors__text">Дымчатый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_creamy"></div>
+                    <p class="colors__text">Кремовый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_lemon"></div>
+                    <p class="colors__text">Лимоновый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_rose"></div>
+                    <p class="colors__text">Розовый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_green"></div>
+                    <p class="colors__text">Салатовый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_light-gray"></div>
+                    <p class="colors__text">Светло-серый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_gray"></div>
+                    <p class="colors__text">Cеро-голубой</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_dark-green"></div>
+                    <p class="colors__text">Серо-зеленый</p>
+                  </li>
+
+                  <li class="colors__item">
+                    <div class="colors__color colors__color_beige"></div>
+                    <p class="colors__text">Бежевый</p>
+                  </li>
+                </ul>
+
+                <p class="price price_margin">
+                  <span>1 800 руб./м2</span><br>
+                  с материалом
+                </p>
+              </div>
+            </li>
+            <!-- /.colors -->
+
+            <li class="remote finishing__item fade">
+              <img class="remote__preview" src="img/remote/preview.jpg" alt="Пример остекления балкона с выносом">
+
+              <div class="remote__content">
+                <p class="remote__text">Что вам даст остекление балкона с выносом?</p>
+
+                <ul class="remote__list">
+                  <li class="remote__item remote__item_arrow">Балкон просторнее на 30-40 см</li>
+                  <li class="remote__item remote__item_still">Широкий подоконник</li>
+                  <li class="remote__item remote__item_thermometr">Дополнительная теплоизоляция</li>
+                </ul>
+
+                <p class="price price_margin">
+                  <span>1 800 руб./м2</span><br>
+                  с материалом
+                </p>
+              </div>
+            </li>
+            <!-- /.remote -->
+
+            <li class="installation finishing__item fade">
+              <img class="installation__preview" src="img/installation/preview.jpg" alt="Пример монтажа крыши">
+
+              <div class="installation__content">
+                <p class="installation__text">Монтаж крыши</p>
+
+                <ul class="installation__list">
+                  <li class="installation__item installation__item_ondulin">Ондулин</li>
+                  <li class="installation__item installation__item_metal-tile">Метоллочерепица</li>
+                </ul>
+
+                <p class="price price_margin">
+                  <span>1 800 руб./м2</span><br>
+                  На деревянной обрешетке
+                </p>
+
+                <p class="price price_margin">
+                  <span>1 800 руб./м2</span><br>
+                  На металлической платформе
+                </p>
+              </div>
+            </li>
+            <!-- /.installation -->
+            
+            <li class="finishing__item fade">
+              <div class="tabs-error finishing__tabs-error">
+                <h4 class="tabs-error__title">Внимание!</h4>
+                <p class="tabs-error__text">Сайт - учебный проект: некоторый контент отсутствует.</p>
+                <p class="tabs-error__comment">Здесь могла быть ваша реклама. :)</p>
+              </div>
+              <!-- /.tabs-error -->
+            </li>
           </ul>
 
-          <form class="form finishing__form" action="#">
+          <form class="form finishing__form form_scale" action="#">
             <p class="form__text">Запишитесь сегодня на
               <span>бесплатный замер</span>
             </p>
           
             <input class="form__input" type="text" placeholder="Введите ваше имя">
             <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
-            <input class="btn" type="submit" value="Вызвать замерщика!">
+            <button class="btn callback-btn"><span>Вызвать замерщика!</span></button>
           
             <p class="form__comment">Ваши данные конфиденциальны</p>
           </form>
@@ -224,15 +376,54 @@
     <section class="our-jobs">
       <h2 class="section-title">Наши работы</h2>
 
-      <ul class="our-jobs__list">
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/1.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/2.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/3.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/4.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/5.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/6.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/7.jpg" alt="Пример остекления окна и внутренней отделки"></li>
-        <li class="our-jobs__item"><img class="our-jobs__img" src="img/our-jobs/8.jpg" alt="Пример остекления окна и внутренней отделки"></li>
+      <ul id="lightbox" class="our-jobs__list">
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/1.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/2.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/3.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/4.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/5.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/6.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/7.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
+
+        <li class="our-jobs__item">
+          <button class="our-jobs__btn">
+            <img class="our-jobs__img" src="img/our-jobs/8.jpg" alt="Пример остекления окна и внутренней отделки">
+          </button>
+        </li>
       </ul>
     </section>
     <!-- /.our-jobs -->
@@ -316,20 +507,46 @@
             Только до 23 апреля!
           </p>
 
-          <div class="countdown"></div>
+          <div class="countdown">
+            <p class="countdown__title">До завершения акции:</p>
+
+            <ul class="countdown__list">
+              <li class="countdown__item">
+                <div class="countdown__num countdown__days">00</div>
+                <div class="countdown__text">Дней</div>
+              </li>
+
+              <li class="countdown__item">
+                <div class="countdown__num countdown__hours">00</div>
+                <div class="countdown__text">Часов</div>
+              </li>
+
+              <li class="countdown__item">
+                <div class="countdown__num countdown__minutes">00</div>
+                <div class="countdown__text">Минут</div>
+              </li>
+
+              <li class="countdown__item">
+                <div class="countdown__num countdown__seconds">00</div>
+                <div class="countdown__text">Секунд</div>
+              </li>
+            </ul>
+          </div>
+          <!-- /.countdown -->
         </div>
         
-        <form class="form" action="#">
+        <form class="form form_scale" action="#">
           <p class="form__text">Запишитесь сегодня на
             <span>бесплатный замер</span>
           </p>
           
           <input class="form__input" type="text" placeholder="Введите ваше имя">
           <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
-          <input class="btn" type="submit" value="Вызвать замерщика!">
+          <button class="btn callback-btn"><span>Вызвать замерщика</span></button>
           
           <p class="form__comment">Ваши данные конфиденциальны</p>
         </form>
+        <!-- /.form -->
       </div>
     </div>
     <!-- /.container -->
@@ -341,7 +558,7 @@
       <h2 class="section-title">Как нас найти</h2>
 
       <div class="contacts__content">
-        <div class="map"></div>
+        <div id="map" class="map"></div>
 
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -351,7 +568,7 @@
 
           <li class="contacts__item">
             <h3 class="contacts__title">Фактический адрес:</h3>
-            <p class="contacts__text">ООО «ИРВАС», 141031, МО, Мытищинский р-он, п.Вешки,Выставочная,д.53</p>
+            <p class="contacts__text">ООО «ИРВАС», 141031, МО, Мытищинский р-он, п.Вешки,Выставочная,д.53</p>
           </li>
 
           <li class="contacts__item">
@@ -377,7 +594,7 @@
 
   <section class="specialist">
     <p class="specialist__text">Остались вопросы?</p>
-    <a href="" class="specialist__link">Спросите у нашего специалиста!</a>
+    <button class="specialist__btn callback-btn">Спросите у нашего специалиста!</button>
   </section>
   <!-- /.specialist -->
 
@@ -387,7 +604,9 @@
         Работаем без выходных
       </p>
   
-      <img class="logo" src="img/logo.png" alt="Ирвас">
+      <a href="#" class="logo">
+        <img class="logo__img" src="img/logo.png" alt="Ирвас">
+      </a>
   
       <ul class="footer__links">
         <li class="footer__link">
@@ -402,5 +621,43 @@
     <!-- /.footer -->
   </div>
   <!-- /.container -->
+
+
+  <!-- MODALS -->
+  <div class="callback modal fade">
+    <form class="form" action="#">
+      <div class="callback__close modal__close">&times;</div>
+      <p class="form__text">Закажите сейчас
+        <span>обратный звонок</span>  
+      </p>
+      <input class="form__input" type="text" placeholder="Введите ваше имя">
+      <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
+      <button class="btn error-btn"><span>Отправить заявку</span></button>
+      <p class="form__comment">Ваши данные конфиденциальны</p>
+    </form>
+  </div>
+
+  <div class="cost modal fade">
+    <form class="form" action="#">
+      <div class="cost__close modal__close">&times;</div>
+      <p class="form__text">Рассчитать стоимость
+        <span>со скидкой</span>
+      </p>
+      <input class="form__input" type="text" placeholder="Введите ваше имя">
+      <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
+      <button class="btn error-btn"><span>Рассчитать стоимость</span></button>
+      <p class="form__comment">Ваши данные конфиденциальны</p>
+    </form>
+  </div>
+
+  <div class="error modal fade">
+    <div class="error__body">
+      <div class="error__close modal__close">&times;</div>
+      <div class="error__title">Внимание!</div>
+      <p class="error__text">Этот сайт - учебный проект: некоторые функции отсутствуют.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

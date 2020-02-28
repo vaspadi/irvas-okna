@@ -1,0 +1,44 @@
+.installation
+  display: flex
+  align-items: center
+
+  &__preview
+    margin-right: 5rem
+
+  &__content
+    display: flex
+    flex-flow: column nowrap
+
+  &__text
+    font-weight: bold
+    margin-bottom: 4rem
+
+  &__list
+    margin-left: 7rem
+
+  &__item
+    position: relative
+    font-size: 1.2rem
+    font-weight: bold
+    margin-bottom: 5rem
+
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -7rem
+      display: inline-block
+      width: 5rem
+      height: 5rem
+      background-color: #fff
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+      border-radius: 50%
+      transform: translateY(-50%)
+
+  &__item_ondulin::before
+    background-image: url(../img/installation/ondulin.png)
+
+  &__item_metal-tile::before
+    background-image: url(../img/installation/metal-tile.png)
