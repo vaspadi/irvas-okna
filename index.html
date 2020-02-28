@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-webp" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=b1ca462e-0ff0-47eb-bbd7-5c3ecb1965b9&lang=ru_RU" type="text/javascript"></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b1ca462e-0ff0-47eb-bbd7-5c3ecb1965b9&lang=ru_RU"></script>
+  <script src="js/modernizr-webp.js"></script>
+  <script src="js/script.js"></script>
+
   <title>Ирвас</title>
 </head>
 <body>
@@ -45,12 +50,15 @@
               <li class="title-page__feature">
                 <p>Высокое качество</p>
               </li>
+
               <li class="title-page__feature title-page__feature_time">
                 <p>Быстрый монтаж</p>
               </li>
+
               <li class="title-page__feature title-page__feature_calendar">
                 <p>Гарантия<br>3 года</p>
               </li>
+
               <li class="title-page__feature title-page__feature_truk">
                 <p>Вывоз<br>мусора</p>
               </li>
@@ -83,27 +91,42 @@
   
       <ul class="glazing-tabs glazing__tabs">
         <li class="glazing-tabs__item">
-          <img class="glazing-tabs__img" src="img/glazing-tabs/wooden.jpg" alt="Окно с деревянными рамками">
+          <picture>
+            <source srcset="img/glazing-tabs/wooden.webp" type="image/webp">
+            <img class="glazing-tabs__img" src="img/glazing-tabs/wooden.jpg" alt="Окно с деревянными рамками">
+          </picture>
           <button class="glazing-tabs__btn">Деревянное остекление</button>
         </li>
   
         <li class="glazing-tabs__item">
-          <img class="glazing-tabs__img" src="img/glazing-tabs/aluminium.jpg" alt="Окно с алюминиевыми рамками">
+          <picture>
+            <source srcset="img/glazing-tabs/aluminium.webp" type="image/webp">
+            <img class="glazing-tabs__img" src="img/glazing-tabs/aluminium.jpg" alt="Окно с алюминиевыми рамками">
+          </picture>
           <button class="glazing-tabs__btn">Алюминиевое остекление</button>
         </li>
   
         <li class="glazing-tabs__item">
-          <img class="glazing-tabs__img" src="img/glazing-tabs/plastic.jpg" alt="Окно с пластиковыми рамами">
-            <button class="glazing-tabs__btn">Остекление пластиковыми рамами</button>
+          <picture>
+            <source srcset="img/glazing-tabs/plastic.webp" type="image/webp">
+            <img class="glazing-tabs__img" src="img/glazing-tabs/plastic.jpg" alt="Окно с пластиковыми рамами">
+          </picture>
+          <button class="glazing-tabs__btn">Остекление пластиковыми рамами</button>
         </li>
   
         <li class="glazing-tabs__item">
-          <img class="glazing-tabs__img" src="img/glazing-tabs/franch.jpg" alt="Окно панарамным видом">
+          <picture>
+            <source srcset="img/glazing-tabs/franch.webp" type="image/webp">
+            <img class="glazing-tabs__img" src="img/glazing-tabs/franch.jpg" alt="Окно панарамным видом">
+          </picture>
           <button class="glazing-tabs__btn">Французское остекление (панорамное)</button>
         </li>
   
         <li class="glazing-tabs__item">
-          <img class="glazing-tabs__img" src="img/glazing-tabs/with-removal.jpg" alt="Окно с выносом подоконника">
+          <picture>
+            <source srcset="img/glazing-tabs/with-removal.webp" type="image/webp">
+            <img class="glazing-tabs__img" src="img/glazing-tabs/with-removal.jpg" alt="Окно с выносом подоконника">
+          </picture>
           <button class="glazing-tabs__btn">Остекление с выносом</button>
         </li>
       </ul>
@@ -114,7 +137,12 @@
           <ul class="wooden">
             <li class="wooden__item wooden__item_cold">
               <h4 class="wooden__title wooden__title_cold">Холодное</h4>
-              <img class="wooden__img" src="img/wooden/cold.jpg" alt="Пример деревянного, холодного остекления">
+
+              <picture>
+                <source srcset="img/wooden/cold.webp" type="image/webp">
+                <img class="wooden__img" src="img/wooden/cold.jpg" alt="Пример деревянного, холодного остекления">
+              </picture>
+
               <ul class="wooden__list">
                 <li>Конструктивная толщина 42-58 мм</li>
                 <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
@@ -129,7 +157,12 @@
   
             <li class="wooden__item wooden__item_warm">
               <h4 class="wooden__title wooden__title_warm">Теплое</h4>
-              <img class="wooden__img" src="img/wooden/warm.jpg" alt="Пример деревянного, теплого остекление">
+              
+              <picture>
+                <source srcset="img/wooden/warm.webp" type="image/webp">
+                  <img class="wooden__img" src="img/wooden/warm.jpg" alt="Пример деревянного, теплого остекление">
+              </picture>
+
               <ul class="wooden__list">
                 <li>Конструктивная толщина профиля: 58-78 м</li>
                 <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
@@ -168,12 +201,15 @@
           <li class="finishing__tab">
             <button class="finishing__btn">Внутренняя отделка</button>
           </li>
+          
           <li class="finishing__tab">
             <button class="finishing__btn">Внешняя отделка</button>
           </li>
+          
           <li class="finishing__tab">
             <button class="finishing__btn">Выносное остекление</button>
           </li>
+          
           <li class="finishing__tab">
             <button class="finishing__btn">Крыша на балкон</button>
           </li>
@@ -182,11 +218,17 @@
         <div class="finishing__row">
           <ul class="finishing__content">
             <li class="interior finishing__item fade">
-              <img class="interior__preview" src="img/interior/preview.jpg" alt="Пример внутренней отделки">
+              <picture>
+                <source srcset="img/interior/preview.webp" type="image/webp">
+                <img class="interior__preview" src="img/interior/preview.jpg" alt="Пример внутренней отделки">
+              </picture>
 
               <ul class="interior__list">
                 <li class="interior__item">
-                  <img class="interior__img" src="img/interior/wooden-boards.png" alt="Пример вагонки">
+                  <picture>
+                    <source srcset="img/interior/wooden-boards.webp" type="image/webp">
+                    <img class="interior__img" src="img/interior/wooden-boards.png" alt="Пример вагонки">
+                  </picture>
                   <h4 class="interior__title">Вагонка</h4>
                   <p class="price price_margin">
                     <span>600 руб. кв.м.</span><br>
@@ -195,7 +237,10 @@
                 </li>
 
                 <li class="interior__item">
-                  <img class="interior__img" src="img/interior/plastic-boards.png" alt="Пример пластиковой вагонки">
+                  <picture>
+                    <source srcset="img/interior/plastic-boards.webp" type="image/webp">
+                    <img class="interior__img" src="img/interior/plastic-boards.png" alt="Пример пластиковой вагонки">
+                  </picture>
                   <h4 class="interior__title">Пластиковая вагонка</h4>
                   <p class="price price_margin">
                     <span>750 руб. кв.м.</span><br>
@@ -204,7 +249,10 @@
                 </li>
 
                 <li class="interior__item">
-                  <img class="interior__img" src="img/interior/pvc.png" alt="Пример ПВХ-панели">
+                  <picture>
+                    <source srcset="img/interior/pvc.webp" type="image/webp">
+                    <img class="interior__img" src="img/interior/pvc.png" alt="Пример ПВХ-панели">
+                  </picture>
                   <h4 class="interior__title">ПВХ-панели</h4>
                   <p class="price price_margin">
                     <span>800 руб. кв.м.</span><br>
@@ -213,7 +261,10 @@
                 </li>
 
                 <li class="interior__item">
-                  <img class="interior__img" src="img/interior/laminate-flooring.png" alt="Пример настила пола из ламината">
+                  <picture>
+                    <source srcset="img/interior/laminate-flooring.webp" type="image/webp">
+                    <img class="interior__img" src="img/interior/laminate-flooring.png" alt="Пример настила пола из ламината">
+                  </picture>
                   <h4 class="interior__title">Настил пола из ламината</h4>
                   <p class="price price_margin">
                     <span>1250 руб. кв.м.</span><br>
@@ -222,7 +273,10 @@
                 </li>
 
                 <li class="interior__item">
-                  <img class="interior__img" src="img/interior/wooden-flooring.png" alt="Пример настила пола из ламината">
+                  <picture>
+                    <source srcset="img/interior/wooden-flooring.webp" type="image/webp">
+                    <img class="interior__img" src="img/interior/wooden-flooring.png" alt="Пример настила пола из ламината">
+                  </picture>
                   <h4 class="interior__title">Настил пола из дерева</h4>
                   <p class="price price_margin">
                     <span>1650 руб. кв.м.</span><br>
@@ -234,7 +288,10 @@
             <!-- /.interior -->
 
             <li class="colors finishing__item fade">
-              <img class="colors__preview" src="img/colors/preview.jpg" alt="Виниловый сайдинг в белом цвете">
+              <picture>
+                <source srcset="img/colors/preview.webp" type="image/webp">
+                <img class="colors__preview" src="img/colors/preview.jpg" alt="Виниловый сайдинг в белом цвете">
+              </picture>
 
               <div class="colors__content">
                 <h4 class="colors__title">Большой выбор цветов винилового сайдинга</h4>
@@ -300,7 +357,10 @@
             <!-- /.colors -->
 
             <li class="remote finishing__item fade">
-              <img class="remote__preview" src="img/remote/preview.jpg" alt="Пример остекления балкона с выносом">
+              <picture>
+                <source srcset="img/remote/preview.webp" type="image/webp">
+                <img class="remote__preview" src="img/remote/preview.jpg" alt="Пример остекления балкона с выносом">
+              </picture>
 
               <div class="remote__content">
                 <p class="remote__text">Что вам даст остекление балкона с выносом?</p>
@@ -320,14 +380,30 @@
             <!-- /.remote -->
 
             <li class="installation finishing__item fade">
-              <img class="installation__preview" src="img/installation/preview.jpg" alt="Пример монтажа крыши">
+              <picture>
+                <source srcset="img/installation/preview.webp" type="image/webp">
+                <img class="installation__preview" src="img/installation/preview.jpg" alt="Пример монтажа крыши">
+              </picture>
 
               <div class="installation__content">
                 <p class="installation__text">Монтаж крыши</p>
 
                 <ul class="installation__list">
-                  <li class="installation__item installation__item_ondulin">Ондулин</li>
-                  <li class="installation__item installation__item_metal-tile">Метоллочерепица</li>
+                  <li class="installation__item">
+                    <picture>
+                      <source srcset="img/installation/ondulin.webp" type="image/webp">
+                      <img class="installation__img" src="img/installation/ondulin.png" alt="Логотип сайта JOINTS REPORT">
+                    </picture>
+                    <p>Ондулин</p>
+                  </li>
+
+                  <li class="installation__item">
+                    <picture>
+                      <source srcset="img/installation/metal-tile.webp" type="image/webp">
+                      <img class="installation__img" src="img/installation/metal-tile.png" alt="Логотип сайта JOINTS REPORT">
+                    </picture>
+                    <p>Метоллочерепица</p>
+                  </li>
                 </ul>
 
                 <p class="price price_margin">
@@ -379,49 +455,73 @@
       <ul id="lightbox" class="our-jobs__list">
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/1.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/1.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/1.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/2.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/2.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/2.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/3.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/3.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/3.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/4.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/4.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/4.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/5.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/5.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/5.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/6.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/6.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/6.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/7.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/7.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/7.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
 
         <li class="our-jobs__item">
           <button class="our-jobs__btn">
-            <img class="our-jobs__img" src="img/our-jobs/8.jpg" alt="Пример остекления окна и внутренней отделки">
+            <picture>
+              <source srcset="img/our-jobs/8.webp" type="image/webp">
+              <img class="our-jobs__img" src="img/our-jobs/8.jpg" alt="Пример остекления окна и внутренней отделки">
+            </picture>
           </button>
         </li>
       </ul>
@@ -657,7 +757,5 @@
       <p class="error__text">Этот сайт - учебный проект: некоторые функции отсутствуют.</p>
     </div>
   </div>
-
-  <script src="js/script.js"></script>
 </body>
 </html>

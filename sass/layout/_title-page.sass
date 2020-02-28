@@ -1,6 +1,5 @@
 .title-page
   background-color: #525252
-  background-image: url(../img/title-page/bg.jpg)
   background-position: center
   background-size: cover
 
@@ -42,11 +41,16 @@
       display: inline-block
       width: 5rem
       height: 5rem
-      background-image: url(../img/title-page/quality.png)
       background-repeat: no-repeat
       background-position: center
       background-size: contain
       transform: translateX(-50%)
+
+    .no-webp &::before
+      background-image: url(../img/title-page/quality.png)
+
+    .webp &::before
+      background-image: url(../img/title-page/quality.webp)
 
     p
       text-align: center
@@ -58,10 +62,27 @@
 
   &__feature_time::before
     left: 47%
+
+  .no-webp &__feature_time::before
     background-image: url(../img/title-page/time.png)
 
-  &__feature_calendar::before
+  .webp &__feature_time::before
+    background-image: url(../img/title-page/time.webp)
+
+  .no-webp &__feature_calendar::before
     background-image: url(../img/title-page/calendar.png)
+
+  .webp &__feature_calendar::before
+    background-image: url(../img/title-page/calendar.webp)
   
-  &__feature_truk::before
+  .no-webp &__feature_truk::before
     background-image: url(../img/title-page/truck.png)
+
+  .webp &__feature_truk::before
+    background-image: url(../img/title-page/truck.webp)
+
+.no-webp .title-page
+  background-image: url(../img/title-page/bg.jpg)
+
+.webp .title-page
+  background-image: url(../img/title-page/bg.webp)

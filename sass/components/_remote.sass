@@ -26,7 +26,7 @@
       position: absolute
       top: 50%
       left: -7rem
-      display: none
+      display: inline-block
       width: 4rem
       height: 3rem
       background-repeat: no-repeat
@@ -35,13 +35,13 @@
       transform: translateY(-50%)
 
   &__item_arrow::before
-    display: inline-block
     background-image: url(../img/remote/double-arrow.svg)
 
-  &__item_still::before
-    display: inline-block
+  .no-webp &__item_still::before
     background-image: url(../img/remote/still.png)
 
+  .webp &__item_still::before
+    background-image: url(../img/remote/still.webp)
+
   &__item_thermometr::before
-    display: inline-block
     background-image: url(../img/remote/thermometr.svg)

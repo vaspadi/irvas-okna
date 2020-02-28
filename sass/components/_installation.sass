@@ -11,34 +11,14 @@
 
   &__text
     font-weight: bold
-    margin-bottom: 4rem
-
-  &__list
-    margin-left: 7rem
+    margin-bottom: 2rem
 
   &__item
-    position: relative
+    display: flex
+    align-items: center
     font-size: 1.2rem
     font-weight: bold
-    margin-bottom: 5rem
+    margin-bottom: 2rem
 
-    &::before
-      content: ''
-      position: absolute
-      top: 50%
-      left: -7rem
-      display: inline-block
-      width: 5rem
-      height: 5rem
-      background-color: #fff
-      background-size: contain
-      background-repeat: no-repeat
-      background-position: center
-      border-radius: 50%
-      transform: translateY(-50%)
-
-  &__item_ondulin::before
-    background-image: url(../img/installation/ondulin.png)
-
-  &__item_metal-tile::before
-    background-image: url(../img/installation/metal-tile.png)
+  &__img
+    margin-right: 2rem

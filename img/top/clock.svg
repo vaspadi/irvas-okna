@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="511.999" height="511.999" viewBox="0 0 612 612">
-  <defs>
-    <style>
-      .cls-1 {
-        fill-rule: evenodd;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="0.5" y="0.5" width="612" height="612" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#a5a5a5"/>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-      <feBlend result="blend" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M306.5,612.5C137.771,612.5.51,475.239,0.51,306.49,0.51,137.781,137.771.5,306.5,0.5S612.49,137.781,612.49,306.49C612.51,475.239,475.229,612.5,306.5,612.5Zm0-577.024c-149.438,0-271.015,121.576-271.015,271.014,0,149.458,121.577,271.034,271.015,271.034S577.515,455.948,577.515,306.49C577.534,157.052,455.958,35.476,306.5,35.476ZM400.353,417.82a17.387,17.387,0,0,1-12.375-5.123l-93.833-93.833a17.456,17.456,0,0,1-5.123-12.374V107.968a17.488,17.488,0,0,1,34.975,0V299.259l88.71,88.709A17.488,17.488,0,0,1,400.353,417.82Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 612 612"><defs><filter id="a" x=".5" y=".5" width="612" height="612" filterUnits="userSpaceOnUse"><feFlood result="flood" flood-color="#a5a5a5"/><feComposite result="composite" operator="in" in2="SourceGraphic"/><feBlend result="blend" in2="SourceGraphic"/></filter></defs><path data-name="Forma 1" d="M307 613a306 306 0 110-613 306 306 0 010 613zm0-578a271 271 0 100 543 271 271 0 000-543zm93 383a17 17 0 01-12-5l-94-94a17 17 0 01-5-13V108a17 17 0 0135 0v191l89 89a17 17 0 01-13 30z" fill-rule="evenodd" filter="url(#a)"/></svg>

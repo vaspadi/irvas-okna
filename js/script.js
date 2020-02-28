@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-
   const createTabs = function (tabsClass, contentsClass) {
     const tabs = document.getElementsByClassName(tabsClass);
     const contents = document.getElementsByClassName(contentsClass);
@@ -97,7 +96,6 @@ window.addEventListener('DOMContentLoaded', function () {
       };
     }
   };
-
   
   const createGalary = function (elementsClass, imgClass) {
     const elements = document.getElementsByClassName(elementsClass);
@@ -136,6 +134,8 @@ window.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < elements.length; i++) {
       elements[i].onclick = function () {
         let img = images[i].cloneNode();
+
+        // img.setAttribute('src', 'img/our-jobs/1-big.jpg');
         
         if (lightbox.childNodes.length == 0) showLightbox(img);
       };
@@ -184,9 +184,13 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     }, 1000);
   };
+
+
+  //webp
+  document.documentElement.classList.remove("no-webp");
+
   
-  
-  // modals
+  //modals
   let sumModal = 0;
   
   createModal('callback');
@@ -219,5 +223,11 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   ymaps.ready(init);
+
+  if (Modernizr) {
+    console.log('true');
+  } else {
+    console.log(false);
+  }
 });
 

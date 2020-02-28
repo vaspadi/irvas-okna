@@ -312,6 +312,10 @@ ul {
   cursor: pointer;
 }
 
+.glazing-tabs__item:hover {
+  color: #000;
+}
+
 .glazing-tabs__item_active {
   text-decoration: none;
   color: #000;
@@ -328,9 +332,10 @@ ul {
   color: inherit;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.glazing-tabs__btn:focus, .glazing-tabs__btn:hover {
+.glazing-tabs__btn:focus {
   color: #000;
   outline: none;
 }
@@ -739,7 +744,7 @@ ul {
   position: absolute;
   top: 50%;
   left: -7rem;
-  display: none;
+  display: inline-block;
   width: 4rem;
   height: 3rem;
   background-repeat: no-repeat;
@@ -750,17 +755,18 @@ ul {
 }
 
 .remote__item_arrow::before {
-  display: inline-block;
   background-image: url(../img/remote/double-arrow.svg);
 }
 
-.remote__item_still::before {
-  display: inline-block;
+.no-webp .remote__item_still::before {
   background-image: url(../img/remote/still.png);
 }
 
+.webp .remote__item_still::before {
+  background-image: url(../img/remote/still.webp);
+}
+
 .remote__item_thermometr::before {
-  display: inline-block;
   background-image: url(../img/remote/thermometr.svg);
 }
 
@@ -789,43 +795,23 @@ ul {
 
 .installation__text {
   font-weight: bold;
-  margin-bottom: 4rem;
-}
-
-.installation__list {
-  margin-left: 7rem;
+  margin-bottom: 2rem;
 }
 
 .installation__item {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-.installation__item::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -7rem;
-  display: inline-block;
-  width: 5rem;
-  height: 5rem;
-  background-color: #fff;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.installation__item_ondulin::before {
-  background-image: url(../img/installation/ondulin.png);
-}
-
-.installation__item_metal-tile::before {
-  background-image: url(../img/installation/metal-tile.png);
+.installation__img {
+  margin-right: 2rem;
 }
 
 .countdown {
@@ -1043,8 +1029,8 @@ ul {
   display: inline-block;
   width: 3rem;
   height: 3rem;
-  background-image: url(../img/top/measure.svg);
   background-size: contain;
+  background-image: url(../img/top/measure.svg);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -1129,7 +1115,6 @@ ul {
 
 .title-page {
   background-color: #525252;
-  background-image: url(../img/title-page/bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1189,12 +1174,19 @@ ul {
   display: inline-block;
   width: 5rem;
   height: 5rem;
-  background-image: url(../img/title-page/quality.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.no-webp .title-page__feature::before {
+  background-image: url(../img/title-page/quality.png);
+}
+
+.webp .title-page__feature::before {
+  background-image: url(../img/title-page/quality.webp);
 }
 
 .title-page__feature p {
@@ -1209,15 +1201,38 @@ ul {
 
 .title-page__feature_time::before {
   left: 47%;
+}
+
+.no-webp .title-page__feature_time::before {
   background-image: url(../img/title-page/time.png);
 }
 
-.title-page__feature_calendar::before {
+.webp .title-page__feature_time::before {
+  background-image: url(../img/title-page/time.webp);
+}
+
+.no-webp .title-page__feature_calendar::before {
   background-image: url(../img/title-page/calendar.png);
 }
 
-.title-page__feature_truk::before {
+.webp .title-page__feature_calendar::before {
+  background-image: url(../img/title-page/calendar.webp);
+}
+
+.no-webp .title-page__feature_truk::before {
   background-image: url(../img/title-page/truck.png);
+}
+
+.webp .title-page__feature_truk::before {
+  background-image: url(../img/title-page/truck.webp);
+}
+
+.no-webp .title-page {
+  background-image: url(../img/title-page/bg.jpg);
+}
+
+.webp .title-page {
+  background-image: url(../img/title-page/bg.webp);
 }
 
 .glazing {
@@ -1413,6 +1428,11 @@ ul {
   outline: none;
 }
 
+.our-jobs__btn picture {
+  width: inherit;
+  height: inherit;
+}
+
 .our-jobs__img {
   width: inherit;
   height: inherit;
@@ -1523,7 +1543,6 @@ ul {
 
 .discount {
   background-color: #d1d1d1;
-  background-image: url(../img/discount/bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1559,6 +1578,14 @@ ul {
 
 .discount__text {
   font-size: 2.5rem;
+}
+
+.no-webp .discount {
+  background-image: url(../img/discount/bg.jpg);
+}
+
+.webp .discount {
+  background-image: url(../img/discount/bg.webp);
 }
 
 .contacts {
