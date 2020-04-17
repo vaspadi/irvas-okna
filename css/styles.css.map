@@ -4,7 +4,7 @@
     "sources": [
         "../sass/styles.sass",
         "../sass/base/_settings.sass",
-        "../sass/base/_conteiner.sass",
+        "../sass/base/_container.sass",
         "../sass/base/_fonts.sass",
         "../sass/base/_variables.sass",
         "../sass/abstracts/_body-lock.sass",
