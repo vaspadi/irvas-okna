@@ -1114,6 +1114,7 @@ ul {
 }
 
 .title-page {
+  display: none;
   background-color: #525252;
   background-position: center;
   background-size: cover;
@@ -1236,9 +1237,7 @@ ul {
 }
 
 .glazing {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1252,6 +1251,7 @@ ul {
 }
 
 .finishing {
+  display: none;
   background-color: #f7f7f7;
   padding: 7rem 0;
 }
@@ -1368,7 +1368,7 @@ ul {
 }
 
 .our-jobs {
-  display: block;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1442,6 +1442,7 @@ ul {
 }
 
 .features {
+  display: none;
   background-color: #2e9aff;
 }
 
@@ -1498,9 +1499,7 @@ ul {
 }
 
 .payment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1542,6 +1541,7 @@ ul {
 }
 
 .discount {
+  display: none;
   background-color: #d1d1d1;
   background-position: center;
   background-size: cover;
@@ -1589,9 +1589,7 @@ ul {
 }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -1637,9 +1635,7 @@ ul {
 }
 
 .specialist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1668,9 +1664,7 @@ ul {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
