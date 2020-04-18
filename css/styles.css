@@ -7,13 +7,12 @@
           box-sizing: border-box;
 }
 
-html {
-  font-size: 0.625em;
+:root {
+  font-size: 10px;
 }
 
 body {
   font-family: "OpenSans", sans-serif;
-  font-size: 1.5rem;
 }
 
 ul {
@@ -24,12 +23,12 @@ ul {
   height: inherit;
   min-height: inherit;
   max-height: inherit;
-  max-width: 117rem;
-  min-width: 29rem;
+  max-width: 1170px;
+  min-width: 290px;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 75em) {
+@media screen and (max-width: 1200px) {
   .container {
     margin: 0 1.5rem;
   }
@@ -985,11 +984,34 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-size: 1.4rem;
+  color: #333333;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 1.5rem 0;
-  color: #333333;
+}
+
+@media screen and (max-width: 1000px) {
+  .top {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1rem;
+  }
 }
 
 .top__logo {
@@ -1001,34 +1023,55 @@ ul {
           align-items: center;
 }
 
+.top__logo-img {
+  width: 10em;
+}
+
+@media screen and (max-width: 450px) {
+  .top__logo-img {
+    width: 8em;
+  }
+}
+
 .top__text {
-  max-width: 22rem;
-  font-size: 1.4rem;
+  max-width: 15.7em;
   color: #2e9aff;
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 800px) {
+  .top__text {
+    display: none;
+  }
+}
+
 .top__btn {
   position: relative;
-  max-width: 17rem;
   text-align: left;
+  font-size: 1em;
   font-weight: bold;
-  text-transform: uppercase;
   color: #55a831;
+  text-transform: uppercase;
   background-color: transparent;
-  padding: 1.3rem 1.5rem 1.3rem 6rem;
-  border: 0.2rem solid #55a831;
-  border-radius: 1rem;
+  padding: 1em 1.9em 0.75em 3.9em;
+  border: 2px solid #55a831;
+  border-radius: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .top__btn {
+    display: none;
+  }
 }
 
 .top__btn::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: 1.5rem;
+  left: 1em;
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.1em;
+  height: 2.1em;
   background-size: contain;
   background-image: url(../img/top/measure.svg);
   -webkit-transform: translateY(-50%);
@@ -1048,25 +1091,38 @@ ul {
 .top__working-hours {
   position: relative;
   text-transform: lowercase;
+  margin-left: 2.86em;
+}
+
+@media screen and (max-width: 1000px) {
+  .top__working-hours {
+    margin-left: 0;
+  }
 }
 
 .top__working-hours::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -4rem;
+  left: -2.86em;
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.14em;
+  height: 2.14em;
   background-image: url(../img/top/clock.svg);
   background-size: contain;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
+@media screen and (max-width: 1000px) {
+  .top__working-hours::before {
+    display: none;
+  }
+}
+
 .top__working-hours span {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -1082,23 +1138,43 @@ ul {
   font-size: 2.3rem;
   font-weight: bold;
   text-align: right;
+  margin-left: 1.3em;
+}
+
+@media screen and (max-width: 1000px) {
+  .top__number {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .top__number {
+    font-size: 1.4rem;
+  }
 }
 
 .top__number::before {
   content: '';
   position: absolute;
-  top: 0.5rem;
-  left: -3rem;
+  top: 0.22em;
+  left: -1.3em;
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 0.87em;
+  height: 0.87em;
   background-image: url(../img/top/phone-call.svg);
   background-size: contain;
 }
 
+@media screen and (max-width: 1000px) {
+  .top__number::before {
+    display: none;
+  }
+}
+
 .top__callback {
   display: block;
-  font-size: 1.6rem;
+  font-size: 0.7em;
   font-weight: normal;
   text-decoration: underline;
   color: #2e9aff;
@@ -1106,6 +1182,12 @@ ul {
   border: none;
   cursor: pointer;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .top__callback {
+    margin-top: 0rem;
+  }
 }
 
 .top__callback:focus, .top__callback:hover {

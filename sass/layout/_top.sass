@@ -1,40 +1,62 @@
 .top
   display: flex
   justify-content: space-between
+  font-size: 1.4rem
+  color: $text-color
   align-items: center
   padding: 1.5rem 0
-  color: $text-color
+
+  @media screen and (max-width: 1000px)
+    font-size: 1.2rem
+
+  @media screen and (max-width: 800px)
+    justify-content: space-around
+    
+  @media screen and (max-width: 450px)
+    justify-content: space-between
+    font-size: 1rem
 
   &__logo
     display: flex
     align-items: center
 
+  &__logo-img
+    width: 10em
+
+    @media screen and (max-width: 450px)
+      width: 8em
+
   &__text
-    max-width: 22rem
-    font-size: 1.4rem
+    max-width: 15.7em
     color: $active-color
     margin-left: 2rem
 
+    @media screen and (max-width: 800px)
+      display: none
+
   &__btn
     position: relative
-    max-width: 17rem
     text-align: left
+    font-size: 1em
     font-weight: bold
-    text-transform: uppercase
     color: #55a831
+    text-transform: uppercase
     background-color: transparent
-    padding: 1.3rem 1.5rem 1.3rem 6rem
-    border: 0.2rem solid #55a831
-    border-radius: 1rem
+    padding: 1em 1.9em 0.75em 3.9em
+    border: 2px solid #55a831
+    border-radius: 1em
+
+    @media screen and (max-width: 800px)
+      display: none
 
     &::before
       content: ''
       position: absolute
       top: 50%
-      left: 1.5rem
+      left: 1em
       display: inline-block
-      width: 3rem
-      height: 3rem
+      width: 2.1em
+      height: 2.1em
       background-size: contain
       background-image: url(../img/top/measure.svg)
       transform: translateY(-50%)
@@ -52,23 +74,29 @@
   &__working-hours
     position: relative
     text-transform: lowercase
+    margin-left: 2.86em
+
+    @media screen and (max-width: 1000px)
+      margin-left: 0      
 
     &::before
       content: ''
       position: absolute
       top: 50%
-      left: -4rem
+      left: -2.86em
       display: inline-block
-      width: 3rem
-      height: 3rem
+      width: 2.14em
+      height: 2.14em
       background-image: url(../img/top/clock.svg)
       background-size: contain
       transform: translateY(-50%)
 
+      @media screen and (max-width: 1000px)
+        display: none
 
     span
       display: block
-      font-size: 1.8rem
+      font-size: 1.3em
       font-weight: bold
 
   &__number
@@ -78,21 +106,32 @@
     font-size: 2.3rem
     font-weight: bold
     text-align: right
+    margin-left: 1.3em
+
+    @media screen and (max-width: 1000px)
+      font-size: 1.8rem
+      margin-left: 0
+
+    @media screen and (max-width: 450px)
+      font-size: 1.4rem
 
     &::before
       content: ''
       position: absolute
-      top: 0.5rem 
-      left: -3rem
+      top: 0.22em 
+      left: -1.3em
       display: inline-block
-      width: 2rem
-      height: 2rem
+      width: 0.87em
+      height: 0.87em
       background-image: url(../img/top/phone-call.svg)
       background-size: contain
 
+      @media screen and (max-width: 1000px)
+        display: none
+
   &__callback
     display: block
-    font-size: 1.6rem
+    font-size: 0.7em
     font-weight: normal
     text-decoration: underline
     color: $active-color
@@ -100,6 +139,9 @@
     border: none
     cursor: pointer
     margin-top: 1rem
+
+    @media screen and (max-width: 1000px)
+      margin-top: 0rem
 
     &:focus,
     &:hover
