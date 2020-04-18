@@ -1196,10 +1196,10 @@ ul {
 }
 
 .title-page {
-  display: none;
   background-color: #525252;
   background-position: center;
   background-size: cover;
+  font-size: 2.6rem;
 }
 
 .title-page__body {
@@ -1213,7 +1213,6 @@ ul {
 }
 
 .title-page__text {
-  font-size: 2.6rem;
   font-weight: bold;
   color: #333333;
   margin-bottom: 15rem;
@@ -1221,8 +1220,8 @@ ul {
 
 .title-page__text span {
   display: block;
-  font-size: 5.5rem;
-  margin-top: 2rem;
+  font-size: 2.13em;
+  margin-top: 0.3em;
 }
 
 .title-page__features {
@@ -1242,8 +1241,9 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 11rem;
-  height: 11rem;
+  width: 7.33em;
+  height: 7.33em;
+  font-size: 1.5rem;
   background-color: #2e9aff;
   border-radius: 50%;
   margin-right: 2rem;
@@ -1253,10 +1253,10 @@ ul {
   content: '';
   position: absolute;
   left: 50%;
-  top: -1.5rem;
+  top: -1em;
   display: inline-block;
-  width: 5rem;
-  height: 5rem;
+  width: 3.33em;
+  height: 3.33em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
