@@ -189,6 +189,12 @@ ul {
   border-radius: 0.5em;
 }
 
+@media screen and (max-width: 450px) {
+  .form {
+    font-size: 1.8rem;
+  }
+}
+
 .form__text {
   font-weight: bold;
   margin-bottom: 1.5em;
