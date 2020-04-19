@@ -139,14 +139,15 @@ ul {
 }
 
 .btn {
-  width: 27rem;
-  height: 8rem;
+  width: 100%;
+  max-width: 27rem;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#ffb400), to(#ffed26));
   background-image: linear-gradient(to top, #ffb400, #ffed26);
-  border: solid 1px #ffc600;
+  padding: 1.5em 0;
+  border: solid 0.1rem #ffc600;
   border-radius: 1rem;
   -webkit-box-shadow: 0rem 0.2rem 2rem 0 #ff990066;
           box-shadow: 0rem 0.2rem 2rem 0 #ff990066;
@@ -181,50 +182,50 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 37rem;
-  height: 44rem;
+  font-size: 2rem;
+  text-align: center;
   background-color: #fff;
-  padding: 3rem 0;
-  border-radius: 1rem;
+  padding: 2em 2.5em;
+  border-radius: 0.5em;
 }
 
 .form__text {
-  text-align: center;
-  font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 1.5em;
 }
 
 .form__text span {
   display: block;
-  font-size: 2.4rem;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
 
 .form__input {
-  width: 27rem;
-  height: 6rem;
-  font-size: 2rem;
+  width: 100%;
+  max-width: 27rem;
   color: #d1d1d1;
+  font-size: 0.75em;
   text-align: center;
-  padding: 2.3rem 0;
+  padding: 1.3em 0;
   border: 0.1rem solid #d1d1d1;
-  border-radius: 1rem;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
 }
 
 .form__input::-webkit-input-placeholder {
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .form__input:-ms-input-placeholder {
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .form__input::-ms-input-placeholder {
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .form__input::placeholder {
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .form__input:focus {
@@ -237,8 +238,13 @@ ul {
   border-color: #000;
 }
 
+.form__btn {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
 .form__comment {
-  font-size: 1.1rem;
+  font-size: 0.55em;
   color: #d1d1d1;
 }
 
@@ -1037,6 +1043,8 @@ ul {
   max-width: 15.7em;
   color: #2e9aff;
   margin-left: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 800px) {
@@ -1056,6 +1064,8 @@ ul {
   padding: 1em 1.9em 0.75em 3.9em;
   border: 2px solid #55a831;
   border-radius: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 800px) {
@@ -1092,6 +1102,8 @@ ul {
   position: relative;
   text-transform: lowercase;
   margin-left: 2.86em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1139,6 +1151,8 @@ ul {
   font-weight: bold;
   text-align: right;
   margin-left: 1.3em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1199,7 +1213,6 @@ ul {
   background-color: #525252;
   background-position: center;
   background-size: cover;
-  font-size: 2.6rem;
 }
 
 .title-page__body {
@@ -1209,13 +1222,65 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 11rem 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+  .title-page__body {
+    padding: 8rem 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-page__body {
+    padding: 6rem 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .title-page__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .title-page__text {
+  font-size: 2.6rem;
   font-weight: bold;
   color: #333333;
-  margin-bottom: 15rem;
+  margin-bottom: 5.77em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+  .title-page__text {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-page__text {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .title-page__text {
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 3em;
+  }
 }
 
 .title-page__text span {
@@ -1228,6 +1293,14 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 720px) {
+  .title-page__features {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .title-page__feature {
@@ -1247,6 +1320,31 @@ ul {
   background-color: #2e9aff;
   border-radius: 50%;
   margin-right: 2rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+  .title-page__feature {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-page__feature {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .title-page__feature {
+    font-size: 2.5vw;
+    margin-bottom: 5em;
+  }
+}
+
+.title-page__feature:last-child {
+  margin-right: 0;
 }
 
 .title-page__feature::before {
@@ -1310,12 +1408,48 @@ ul {
   background-image: url(../img/title-page/truck.webp);
 }
 
+@media screen and (max-width: 1000px) {
+  .title-page__form {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-page__form {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .title-page__form {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title-page__form {
+    font-size: 1.7rem;
+  }
+}
+
 .no-webp .title-page {
   background-image: url(../img/title-page/bg.jpg);
 }
 
+@media screen and (max-width: 800px) {
+  .no-webp .title-page {
+    background-image: url(../img/title-page/bg-sm.jpg);
+  }
+}
+
 .webp .title-page {
   background-image: url(../img/title-page/bg.webp);
+}
+
+@media screen and (max-width: 800px) {
+  .webp .title-page {
+    background-image: url(../img/title-page/bg-sm.webp);
+  }
 }
 
 .glazing {

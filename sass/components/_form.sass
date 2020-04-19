@@ -4,35 +4,35 @@
   flex-direction: column
   justify-content: space-around  
   align-items: center
-  width: 37rem
-  height: 44rem
+  font-size: 2rem
+  text-align: center
   background-color: #fff
-  padding: 3rem 0
-  border-radius: 1rem
+  padding: 2em 2.5em
+  border-radius: 0.5em
 
   &__text
-    text-align: center
-    font-size: 2rem
     font-weight: bold
+    margin-bottom: 1.5em
 
     span
       display: block
-      font-size: 2.4rem
+      font-size: 1.2em
       text-transform: uppercase
 
   &__input
-    width: 27rem
-    height: 6rem
-    font-size: 2rem
+    width: 100%
+    max-width: 27rem
     color: $gray
+    font-size: 0.75em
     text-align: center
-    padding: 2.3rem 0
+    padding: 1.3em 0
     border: 0.1rem solid $gray
-    border-radius: 1rem
+    border-radius: 0.5em
+    margin-bottom: 1em
 
 
     &::placeholder
-      font-size: 1.5rem
+      font-size: 1em
 
     &:focus
       color: #000
@@ -42,9 +42,12 @@
     &:hover
       border-color: #000
 
+  &__btn
+    font-size: 1em
+    margin-bottom: 1em
   
   &__comment
-    font-size: 1.1rem
+    font-size: 0.55em
     color: $gray
 
 .form_scale
