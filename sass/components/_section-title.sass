@@ -4,6 +4,10 @@
   font-size: 3rem
   font-weight: bold
   text-transform: uppercase
+  transition: all 0.3s
+
+  @media screen and (max-width: 1000px)
+    font-size: 2.5rem
 
   &::after
     content: ''
@@ -11,8 +15,8 @@
     bottom: -2rem
     left: 50%
     display: inline-block
-    width: 14rem
-    height: 0.2rem
+    width: 4.67em
+    height: 0.07em
     background: linear-gradient(90deg, transparent 0%, $active-color 50%, transparent 100%)
     transform: translateX(-50%)
 

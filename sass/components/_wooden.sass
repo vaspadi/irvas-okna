@@ -7,23 +7,27 @@
     position: relative
     display: flex
     flex-flow: column nowrap
-    padding: 3rem 6rem
+    font-size: 2rem
+    padding: 1.5em 3em
     border-top: 0.5rem solid #000
     background-color: #fff
     background-image: linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.1))
     transition: all 0.3s
 
+    @media screen and (max-width: 1000px)
+      font-size: 1.8rem
+      padding: 1em 2em
+
     &::before
       content: ''
       position: absolute
-      top: -0.35rem
+      top: -0.175em
       left: 50%
       display: inline-block
-      width: 0.7rem
-      height: 0.7rem
+      width: 0.35em
+      height: 0.35em
       background-color: #000
       transform: translateX(-50%) rotate(45deg)
-      z-index: -1
 
     &:hover
       transform: scale(1.02)
@@ -45,10 +49,12 @@
 
   &__title
     text-align: center
-    font-size: 2rem
     font-weight: bold
     text-transform: uppercase
-    margin-bottom: 3rem
+    margin-bottom: 1.5em
+
+    @media screen and (max-width: 1000px)
+      margin-bottom: 1em
 
   &__title_cold
     color: $cold
@@ -57,12 +63,18 @@
     color: $warm
 
   &__img
-    margin-bottom: 3rem
+    width: 100%
+    max-width: 23.3em
+    max-height: 15em
+    margin-bottom: 1.5em
 
   &__list
-    min-height: 16rem
-    font-size: 1.4rem
-    padding-left: 4rem
+    min-height: 11.43em
+    font-size: 0.7em
+    padding-left: 2.86em
+
+    @media screen and (max-width: 1000px)
+      min-height: 13em
 
     li
       position: relative
@@ -72,10 +84,10 @@
         content: ''
         position: absolute
         top: 50%
-        left: -4rem 
+        left: -2.86em 
         display: inline-block
-        width: 2.5rem
-        height: 2.5rem
+        width: 1.79em
+        height: 1.79em
         background-image: url(../img/checked.svg)
         background-size: contain
         transform: translateY(-50%)
@@ -86,11 +98,23 @@
     align-items: center
 
   &__price
+    flex-shrink: 0
+    font-weight: bold
+    margin-right: 1rem
+
+    @media screen and (max-width: 1000px)
+      font-size: 0.9em
 
     span
       display: block
-      font-size: 2rem
-      font-weight: bold
+      font-size: 0.75em
+      font-weight: normal
+      margin-top: 0.5em
 
   &__btn
-    height: 6.5rem
+    font-size: 1em
+    max-width: 13.5em
+    padding: 1em 0
+
+    @media screen and (max-width: 1000px)
+      font-size: 0.9em

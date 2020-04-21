@@ -1,16 +1,21 @@
 .glazing-tabs
   display: flex
   justify-content: space-around
+  transition: all 0.3s
 
   &__item
-    flex-basis: 15rem
+    flex-basis: 8.33em
     display: flex
     flex-direction: column
     align-items: center
+    font-size: 1.8rem
     text-align: center
     text-decoration: underline
     color: #249ae6
     cursor: pointer
+    
+    @media screen and (max-width: 1000px)
+      font-size: 1.6rem
 
     &:hover
       color: #000
@@ -20,12 +25,14 @@
     color: #000
 
   &__img
-    margin-bottom: 2rem
+    width: 5.56em
+    height: 5.56em
+    margin-bottom: 1.11em
 
   &__btn
-    font-size: 1.8rem
+    font-size: 1em
     font-weight: bold
-    line-height: 1.4
+    line-height: 1.4em
     color: inherit
     background-color: transparent
     border: none

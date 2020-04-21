@@ -268,6 +268,14 @@ ul {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
 }
 
 .section-title::after {
@@ -276,8 +284,8 @@ ul {
   bottom: -2rem;
   left: 50%;
   display: inline-block;
-  width: 14rem;
-  height: 0.2rem;
+  width: 4.67em;
+  height: 0.07em;
   background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #2e9aff), to(transparent));
   background: linear-gradient(90deg, transparent 0%, #2e9aff 50%, transparent 100%);
   -webkit-transform: translateX(-50%);
@@ -299,11 +307,13 @@ ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .glazing-tabs__item {
-  -ms-flex-preferred-size: 15rem;
-      flex-basis: 15rem;
+  -ms-flex-preferred-size: 8.33em;
+      flex-basis: 8.33em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,10 +324,17 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1.8rem;
   text-align: center;
   text-decoration: underline;
   color: #249ae6;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .glazing-tabs__item {
+    font-size: 1.6rem;
+  }
 }
 
 .glazing-tabs__item:hover {
@@ -330,13 +347,15 @@ ul {
 }
 
 .glazing-tabs__img {
-  margin-bottom: 2rem;
+  width: 5.56em;
+  height: 5.56em;
+  margin-bottom: 1.11em;
 }
 
 .glazing-tabs__btn {
-  font-size: 1.8rem;
+  font-size: 1em;
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.4em;
   color: inherit;
   background-color: transparent;
   border: none;
@@ -427,7 +446,8 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  padding: 3rem 6rem;
+  font-size: 2rem;
+  padding: 1.5em 3em;
   border-top: 0.5rem solid #000;
   background-color: #fff;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, transparent), to(rgba(0, 0, 0, 0.1)));
@@ -436,18 +456,24 @@ ul {
   transition: all 0.3s;
 }
 
+@media screen and (max-width: 1000px) {
+  .wooden__item {
+    font-size: 1.8rem;
+    padding: 1em 2em;
+  }
+}
+
 .wooden__item::before {
   content: '';
   position: absolute;
-  top: -0.35rem;
+  top: -0.175em;
   left: 50%;
   display: inline-block;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.35em;
+  height: 0.35em;
   background-color: #000;
   -webkit-transform: translateX(-50%) rotate(45deg);
           transform: translateX(-50%) rotate(45deg);
-  z-index: -1;
 }
 
 .wooden__item:hover {
@@ -478,10 +504,15 @@ ul {
 
 .wooden__title {
   text-align: center;
-  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+  .wooden__title {
+    margin-bottom: 1em;
+  }
 }
 
 .wooden__title_cold {
@@ -493,13 +524,22 @@ ul {
 }
 
 .wooden__img {
-  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 23.3em;
+  max-height: 15em;
+  margin-bottom: 1.5em;
 }
 
 .wooden__list {
-  min-height: 16rem;
-  font-size: 1.4rem;
-  padding-left: 4rem;
+  min-height: 11.43em;
+  font-size: 0.7em;
+  padding-left: 2.86em;
+}
+
+@media screen and (max-width: 1000px) {
+  .wooden__list {
+    min-height: 13em;
+  }
 }
 
 .wooden__list li {
@@ -511,10 +551,10 @@ ul {
   content: '';
   position: absolute;
   top: 50%;
-  left: -4rem;
+  left: -2.86em;
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.79em;
+  height: 1.79em;
   background-image: url(../img/checked.svg);
   background-size: contain;
   -webkit-transform: translateY(-50%);
@@ -533,14 +573,36 @@ ul {
           align-items: center;
 }
 
+.wooden__price {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .wooden__price {
+    font-size: 0.9em;
+  }
+}
+
 .wooden__price span {
   display: block;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 0.75em;
+  font-weight: normal;
+  margin-top: 0.5em;
 }
 
 .wooden__btn {
-  height: 6.5rem;
+  font-size: 1em;
+  max-width: 13.5em;
+  padding: 1em 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .wooden__btn {
+    font-size: 0.9em;
+  }
 }
 
 .price {
@@ -1515,17 +1577,25 @@ ul {
 }
 
 .glazing {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 8rem 0 12rem;
+  font-size: 2rem;
+  padding: 4em 0 5em;
+}
+
+@media screen and (max-width: 1000px) {
+  .glazing {
+    font-size: 1.5rem;
+  }
 }
 
 .glazing__tabs {
-  margin-top: 10rem;
-  margin-bottom: 4rem;
+  margin: 5em 0 2em;
 }
 
 .finishing {
