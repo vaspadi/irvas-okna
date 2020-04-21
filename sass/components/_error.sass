@@ -3,22 +3,29 @@
 
   &__body
     position: relative
-    top: -13rem
     display: flex
     flex-flow: column nowrap
+    font-size: 3rem
     align-items: center
     text-align: center
-    width: 37rem
-    height: 18rem
     background-color: #fff
-    padding: 3rem 0
-    border-radius: 1rem
+    padding: 1.17em 1.66em
+    border-radius: 0.33em
+    transition: all 0.3s
+
+    @media screen and (max-width: 450px)
+      font-size: 7vw
+
+  &__close
+    top: -1.25em
+    font-size: 2em
 
   &__title
-    font-size: 3rem
     font-weight: bold
     text-transform: uppercase
-    margin-bottom: 3rem
+    margin-bottom: 1em
 
   &__text
-    max-width: 27rem
+    width: 100%
+    max-width: 18em
+    font-size: 0.5em

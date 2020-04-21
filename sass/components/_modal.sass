@@ -9,11 +9,40 @@
   align-items: center
   background-color: rgba($active-color, 0.5)
   z-index: 100
+
+  &__form
+    @media screen and (max-height: 500px) and (orientation: landscape)
+      font-size: 4vmin
+      width: 80vw
+      max-width: 37em
+
+  &__text
+    @media screen and (max-height: 500px) and (orientation: landscape)
+      font-size: 1.2em
+      text-transform: uppercase
+      margin-bottom: 1em
+
+    span
+      @media screen and (max-height: 500px) and (orientation: landscape)
+        display: inline
+        font-size: 1em
   
   &__close
     position: absolute
-    top: -8rem
+    top: -1.33em
     right: 0
-    font-size: 6rem
+    font-size: 3em
     color: #fff
     cursor: pointer
+
+  &__input 
+    @media screen and (max-height: 500px) and (orientation: landscape)
+      width: 49%
+
+  &__btn
+    @media screen and (max-height: 500px) and (orientation: landscape)
+      padding: 0.8em 0
+
+  &__comment
+    @media screen and (max-height: 500px) and (orientation: landscape)
+      font-size: 0.8em
