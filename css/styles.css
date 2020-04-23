@@ -263,6 +263,7 @@ ul {
 }
 
 .section-title {
+  display: none;
   position: relative;
   text-align: center;
   font-size: 3rem;
@@ -368,9 +369,7 @@ ul {
 }
 
 .glazing-tabs-content__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1102,9 +1101,7 @@ ul {
 }
 
 .top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1328,6 +1325,7 @@ ul {
 }
 
 .title-page {
+  display: none;
   background-color: #525252;
   background-position: center;
   background-size: cover;
@@ -1595,7 +1593,7 @@ ul {
 }
 
 .glazing__tabs {
-  margin: 5em 0 2em;
+  margin: 0;
 }
 
 .finishing {
