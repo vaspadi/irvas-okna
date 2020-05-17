@@ -104,20 +104,21 @@ window.addEventListener('DOMContentLoaded', function () {
   //   });
   // };
 
-  const Slider = function Slider(slider, visItems) {
+  const Slider = function Slider(slider) {
     this.slider = document.getElementsByClassName(slider)[0];
     this.track = this.slider.children[0];
     this.items = this.track.children;
     this.buttons = this.slider.children[1];
     this.prev = this.buttons.children[0];
     this.next = this.buttons.children[1];
-    this.visItems = visItems;
     this.slide = 0;
-    this.itemWidth = 100 / this.visItems;
     this.margin = 0;
   };
+  
+  Slider.prototype.create = function (visItems) {
+    this.visItems = visItems;
+    this.itemWidth = 100 / this.visItems;
 
-  Slider.prototype.create = function () {
     let buttons = [];
 
     this.track.classList.add('slider__track');
@@ -134,6 +135,25 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     this.buttons.style.display = 'block';
+  };
+
+  Slider.prototype.remove = function () {
+    let buttons = [];
+
+    this.track.classList.remove('slider__track');
+
+    for (let i = 0; i < this.items.length; i++) {
+      this.items[i].classList.remove('slider__item');
+      this.items[i].style.width = '';
+
+      buttons.push(this.items[i].getElementsByTagName('button')[0]);
+    }
+
+    for (let i = 3; i < this.items.length; i++) {
+      buttons[i].tabIndex = 0;
+    }
+
+    this.buttons.style.display = 'none';
   };
 
   Slider.prototype.showNextSlide = function () {
@@ -166,8 +186,22 @@ window.addEventListener('DOMContentLoaded', function () {
     this.items[0].style.marginLeft = this.margin + '%';
   };
 
-  let glazingSlider = new Slider('glazing-slider', 3);
-  glazingSlider.create();
+  let glazingSlider = new Slider('glazing-slider');
+  
+  const adaptSlider = function (mq) {
+    if (mq.matches) {
+      glazingSlider.remove();
+      glazingSlider.create(2);
+    } else {
+      glazingSlider.remove();
+    }
+  };
+ 
+  let mq = window.matchMedia("(max-width: 800px)");
+  
+  adaptSlider(mq);
+  
+  mq.addListener(adaptSlider);
 
   glazingSlider.next.addEventListener('click', function () {
     glazingSlider.showNextSlide();
