@@ -56,6 +56,127 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   };
 
+  // const createSlider = function (sliderClass, itemsClass, numVisibleItems) {
+  //   const slider = document.getElementsByClassName(sliderClass)[0];
+  //   const items = document.getElementsByClassName(itemsClass);
+  //   const numSlides = items.length;
+  //   const width = 100 / numVisibleItems;
+  //   let visibleSlide = 0;
+  //   let margin = 0;
+
+  //   const createPrev = function () {
+  //     let prev = document.createElement('button');
+  //     prev.textContent = '<';
+  //     prev.classList.add('slider-prev');
+  //     slider.insertBefore(prev, items[0]);
+  //     return prev;
+  //   };
+
+  //   const createNext = function () {
+  //     let next = document.createElement('button');
+  //     next.textContent = '>';
+  //     next.classList.add('slider-next');
+  //     slider.appendChild(next);
+  //     return next;
+  //   };
+
+
+  //   slider.classList.add('slider');
+    
+  //   for (let i = 0; i < items.length; i++) {
+  //     items[i].style.flexShrink = 0;
+  //     items[i].style.flexBasis = width + '%';
+  //   }
+
+  //   const prev = createPrev();
+  //   const next = createNext();
+
+  //   prev.addEventListener('click', function () {
+  //     if (margin >= 0) return;
+  //     margin += 33.33;
+  //     items[0].style.marginLeft = margin + '%';
+  //   });
+
+  //   next.addEventListener('click', function () {
+  //     if (margin <= -33.33 * (numSlides - 3)) return;
+  //     margin -= 33.33;
+  //     items[0].style.marginLeft = margin + '%';
+  //   });
+  // };
+
+  const Slider = function Slider(slider, visItems) {
+    this.slider = document.getElementsByClassName(slider)[0];
+    this.track = this.slider.children[0];
+    this.items = this.track.children;
+    this.buttons = this.slider.children[1];
+    this.prev = this.buttons.children[0];
+    this.next = this.buttons.children[1];
+    this.visItems = visItems;
+    this.slide = 0;
+    this.itemWidth = 100 / this.visItems;
+    this.margin = 0;
+  };
+
+  Slider.prototype.create = function () {
+    let buttons = [];
+
+    this.track.classList.add('slider__track');
+
+    for (let i = 0; i < this.items.length; i++) {
+      this.items[i].classList.add('slider__item');
+      this.items[i].style.width = this.itemWidth + '%';
+
+      buttons.push(this.items[i].getElementsByTagName('button')[0]);
+    }
+
+    for (let i = 3; i < this.items.length; i++) {
+      buttons[i].tabIndex = -1;
+    }
+
+    this.buttons.style.display = 'block';
+  };
+
+  Slider.prototype.showNextSlide = function () {
+    if (this.margin <= -this.itemWidth * (this.items.length - this.visItems)) return;
+
+    let prevButton = this.items[this.slide].getElementsByTagName('button')[0];
+    let nextButton = this.items[this.slide + this.visItems].getElementsByTagName('button')[0];
+    
+    this.slide += 1;
+
+    prevButton.tabIndex = -1;
+    nextButton.tabIndex = 0;
+
+    this.margin -= this.itemWidth;
+    this.items[0].style.marginLeft = this.margin + '%';
+  };
+
+  Slider.prototype.showPrevSlide = function () {
+    if (this.margin >= 0) return;
+
+    this.slide -= 1;
+
+    let prevButton = this.items[this.slide].getElementsByTagName('button')[0];
+    let nextButton = this.items[this.slide + this.visItems].getElementsByTagName('button')[0];
+
+    prevButton.tabIndex = 0;
+    nextButton.tabIndex = -1;
+
+    this.margin += this.itemWidth;
+    this.items[0].style.marginLeft = this.margin + '%';
+  };
+
+  let glazingSlider = new Slider('glazing-slider', 3);
+  glazingSlider.create();
+
+  glazingSlider.next.addEventListener('click', function () {
+    glazingSlider.showNextSlide();
+  });
+
+  glazingSlider.prev.addEventListener('click', function () {
+    glazingSlider.showPrevSlide();
+  });
+
   const createTabs = function (tabsClass, contentsClass) {
     const tabs = document.getElementsByClassName(tabsClass);
     const contents = document.getElementsByClassName(contentsClass);
@@ -196,6 +317,13 @@ window.addEventListener('DOMContentLoaded', function () {
   createModal('callback');
   createModal('cost');
   createModal('error');
+
+  //slider
+  // let glazingTabsSlider = new Slider('glazing-slider', 'glazing-tabs__item', 3);
+  // // createSlider(glazingTabsSlider);
+  // console.log(glazingTabsSlider);
+  
+  // createSlider('title-page__features', 'title-page__feature', 2);
 
   //tabs
   createTabs('glazing-tabs__item', 'glazing-tabs-content__item');

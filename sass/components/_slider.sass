@@ -1,0 +1,36 @@
+.slider
+  position: relative
+
+  &__track
+    overflow: hidden
+    justify-content: flex-start
+    margin: 0 3.89em
+
+  &__item
+    flex-shrink: 0;
+
+  &__buttons
+    display: none
+
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 1em
+    height: 100%
+    font-size: 3.89em
+    font-weight: bold
+    color: rgba($active-color,0.7)
+    background-color: transparent
+    border: none
+    transform: translateY(-50%)
+    cursor: pointer
+
+  &__prev
+    left: 0
+  
+  &__next
+    right: 0
