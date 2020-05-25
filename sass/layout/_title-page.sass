@@ -1,5 +1,5 @@
 .title-page
-  display: none
+  // display: none
   background-color: #525252
   background-position: center
   background-size: cover
@@ -49,6 +49,16 @@
 
     @media screen and (max-width: 720px)
       justify-content: space-between
+      margin-bottom: 5em
+
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.3s
+
+    &:last-child
+      margin-right: 0
 
   &__feature
     position: relative
@@ -60,8 +70,8 @@
     font-size: 1.5rem
     background-color: $active-color
     border-radius: 50%
-    margin-right: 2rem
-    transition: all 0.3s
+    margin-right: 1.33em
+    margin-top: 1em
 
     @media screen and (max-width: 1000px)
       font-size: 1.2rem
@@ -70,11 +80,8 @@
       font-size: 1rem
 
     @media screen and (max-width: 720px)
-      font-size: 2.5vw
-      margin-bottom: 5em
-
-    &:last-child
       margin-right: 0
+      font-size: 2.5vw
 
     &::before
       content: ''
