@@ -2,6 +2,9 @@
   display: flex
   justify-content: space-around
 
+  @media screen and (max-width: 800px)
+    flex-flow: column nowrap
+
   &__item
     flex-basis: 50%
     position: relative
@@ -16,7 +19,10 @@
 
     @media screen and (max-width: 1000px)
       font-size: 1.8rem
-      padding: 1em 2em
+      padding: 1.5em 2em
+
+    @media screen and (max-width: 800px) and (min-width: 600px)
+      flex-flow: row wrap
 
     &::before
       content: ''
@@ -37,6 +43,9 @@
     border-color: $cold
     background-image: linear-gradient(to top, transparent 50%, rgba(36, 152, 230, 0.1))
 
+    @media screen and (max-width: 800px)
+      margin-bottom: 4rem
+
     &::before
       background-color: $cold
 
@@ -56,25 +65,44 @@
     @media screen and (max-width: 1000px)
       margin-bottom: 1em
 
+    @media screen and (max-width: 800px) and (min-width: 600px)
+      width: 100% 
+      font-size: 1.25em
+      margin-bottom: 1.75em
+
   &__title_cold
     color: $cold
 
   &__title_warm
     color: $warm
 
+
   &__img
-    width: 100%
-    max-width: 23.3em
-    max-height: 15em
     margin-bottom: 1.5em
 
+    @media screen and (max-width: 800px) and (min-width: 600px)
+      max-width: 48%
+      margin: 0 4% 2rem 0
+
+    img
+      width: 100%
+      max-width: 23.3em
+      max-height: 15em
+
   &__list
+    display: flex
+    flex-flow: column nowrap
     min-height: 11.43em
     font-size: 0.7em
     padding-left: 2.86em
 
     @media screen and (max-width: 1000px)
       min-height: 13em
+
+    @media screen and (max-width: 800px) and (min-width: 600px)
+      justify-content: center
+      width: 48%
+      margin-bottom: 2rem
 
     li
       position: relative
@@ -96,6 +124,10 @@
     display: flex
     justify-content: space-between
     align-items: center
+
+    @media screen and (max-width: 800px) and (min-width: 600px)
+      justify-content: flex-end
+      width: 100%
 
   &__price
     flex-shrink: 0

@@ -3,29 +3,31 @@
   flex-flow: column nowrap
   align-items: center
   text-align: center
-  width: 45rem
-  height: 25rem
+  max-width: 22.5em
+  font-size: 2rem
   background-color: #fff
-  padding: 3rem 
-  border-radius: 1rem
+  padding: 1.5em 
+  border-radius: 0.5em
   transition: all 0.3s
+
+  @media screen and (max-width: 500px)
+    font-size: 1.6rem
 
   &:hover
     transform: scale(1.02)
     z-index: 10
 
   &__title
-    font-size: 4rem
+    font-size: 2em
     font-weight: bold
     text-transform: uppercase
-    margin-bottom: 2rem
+    margin-bottom: 1em
 
   &__text
-    font-size: 2rem
-    margin-bottom: 3rem
+    margin-bottom: 1.5em
 
   &__comment  
-    font-size: 1rem
+    font-size: 0.5em
     color: #a0a0a0
 
 .tabs-error_gray

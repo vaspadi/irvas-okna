@@ -182,7 +182,7 @@ window.addEventListener('DOMContentLoaded', function () {
     if (this.mq.matches) this.create();
   };  
 
-  let glazingSlider = new Slider('glazing-slider', '800px', 2);
+  let glazingSlider = new Slider('glazing__slider', '720px', 2);
   glazingSlider.buld();
 
   let titlePageSlider = new Slider('title-page__slider', '720px', 2, 'blue');

@@ -278,6 +278,18 @@ ul {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
 .section-title::after {
   content: '';
   position: absolute;
@@ -286,6 +298,7 @@ ul {
   display: inline-block;
   width: 4.67em;
   height: 0.07em;
+  font-size: 3rem;
   background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(50%, #2e9aff), to(transparent));
   background: linear-gradient(90deg, transparent 0%, #2e9aff 50%, transparent 100%);
   -webkit-transform: translateX(-50%);
@@ -315,6 +328,12 @@ ul {
 @media screen and (max-width: 1000px) {
   .glazing-tabs {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .glazing-tabs {
+    font-size: 4vw;
   }
 }
 
@@ -358,12 +377,7 @@ ul {
   cursor: pointer;
 }
 
-.glazing-tabs_margin {
-  margin: 5.56em 0 2.23em;
-}
-
 .glazing-tabs-content__item {
-  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,13 +401,19 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 45rem;
-  height: 25rem;
+  max-width: 22.5em;
+  font-size: 2rem;
   background-color: #fff;
-  padding: 3rem;
-  border-radius: 1rem;
+  padding: 1.5em;
+  border-radius: 0.5em;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 500px) {
+  .tabs-error {
+    font-size: 1.6rem;
+  }
 }
 
 .tabs-error:hover {
@@ -403,19 +423,18 @@ ul {
 }
 
 .tabs-error__title {
-  font-size: 4rem;
+  font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1em;
 }
 
 .tabs-error__text {
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5em;
 }
 
 .tabs-error__comment {
-  font-size: 1rem;
+  font-size: 0.5em;
   color: #a0a0a0;
 }
 
@@ -429,6 +448,15 @@ ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+  .wooden {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
 }
 
 .wooden__item {
@@ -455,7 +483,16 @@ ul {
 @media screen and (max-width: 1000px) {
   .wooden__item {
     font-size: 1.8rem;
-    padding: 1em 2em;
+    padding: 1.5em 2em;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .wooden__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
   }
 }
 
@@ -482,6 +519,12 @@ ul {
   border-color: #249ae6;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, transparent), to(rgba(36, 152, 230, 0.1)));
   background-image: linear-gradient(to top, transparent 50%, rgba(36, 152, 230, 0.1));
+}
+
+@media screen and (max-width: 800px) {
+  .wooden__item_cold {
+    margin-bottom: 4rem;
+  }
 }
 
 .wooden__item_cold::before {
@@ -511,6 +554,14 @@ ul {
   }
 }
 
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .wooden__title {
+    width: 100%;
+    font-size: 1.25em;
+    margin-bottom: 1.75em;
+  }
+}
+
 .wooden__title_cold {
   color: #249ae6;
 }
@@ -520,13 +571,30 @@ ul {
 }
 
 .wooden__img {
-  width: 100%;
-  max-width: 23.3em;
-  max-height: 15em;
   margin-bottom: 1.5em;
 }
 
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .wooden__img {
+    max-width: 48%;
+    margin: 0 4% 2rem 0;
+  }
+}
+
+.wooden__img img {
+  width: 100%;
+  max-width: 23.3em;
+  max-height: 15em;
+}
+
 .wooden__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   min-height: 11.43em;
   font-size: 0.7em;
   padding-left: 2.86em;
@@ -535,6 +603,16 @@ ul {
 @media screen and (max-width: 1000px) {
   .wooden__list {
     min-height: 13em;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .wooden__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 48%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -567,6 +645,15 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px) {
+  .wooden__row {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
 }
 
 .wooden__price {
@@ -1109,6 +1196,12 @@ ul {
   margin: 0 3.89em;
 }
 
+@media screen and (max-width: 500px) {
+  .slider__track {
+    margin: 0 3.5em;
+  }
+}
+
 .slider__item {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1131,7 +1224,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   width: 1em;
-  height: 40%;
+  height: 50%;
   font-size: 3.89em;
   font-weight: bold;
   color: rgba(46, 154, 255, 0.7);
@@ -1141,6 +1234,12 @@ ul {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .slider__prev, .slider__next {
+    font-size: 3em;
+  }
 }
 
 .slider__prev {
@@ -1428,6 +1527,10 @@ ul {
   }
 }
 
+.title-page__content {
+  max-width: 100%;
+}
+
 .title-page__text {
   font-size: 2.6rem;
   font-weight: bold;
@@ -1463,6 +1566,10 @@ ul {
   margin-top: 0.3em;
 }
 
+.title-page__slider {
+  margin-bottom: 5em;
+}
+
 .title-page__features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1474,7 +1581,6 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 5em;
   }
 }
 
@@ -1514,6 +1620,8 @@ ul {
   border-radius: 50%;
   margin-right: 1.33em;
   margin-top: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1530,8 +1638,14 @@ ul {
 
 @media screen and (max-width: 720px) {
   .title-page__feature {
-    margin-right: 0;
     font-size: 2.5vw;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-page__feature {
+    font-size: 4vw;
   }
 }
 
@@ -1661,6 +1775,16 @@ ul {
 @media screen and (max-width: 1000px) {
   .glazing {
     font-size: 1.5rem;
+  }
+}
+
+.glazing__slider {
+  margin: 5.56em 0 2.23em;
+}
+
+@media screen and (max-width: 800px) {
+  .glazing__slider {
+    margin: 5em 0 4em;
   }
 }
 

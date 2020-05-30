@@ -1,5 +1,4 @@
 .section-title
-  // display: none
   position: relative
   text-align: center
   font-size: 3rem
@@ -10,6 +9,12 @@
   @media screen and (max-width: 1000px)
     font-size: 2.5rem
 
+  @media screen and (max-width: 720px)
+    font-size: 2rem
+
+  @media screen and (max-width: 500px)
+    font-size: 1.7rem
+
   &::after
     content: ''
     position: absolute
@@ -18,8 +23,10 @@
     display: inline-block
     width: 4.67em
     height: 0.07em
+    font-size: 3rem
     background: linear-gradient(90deg, transparent 0%, $active-color 50%, transparent 100%)
     transform: translateX(-50%)
+
 
   &_white
     color: #fff
