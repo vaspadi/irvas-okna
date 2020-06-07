@@ -188,6 +188,8 @@ window.addEventListener('DOMContentLoaded', function () {
   let titlePageSlider = new Slider('title-page__slider', '720px', 2, 'blue');
   titlePageSlider.buld();
 
+  let finishingSlider = new Slider('finishing__slider', '720px', 2);
+  finishingSlider.buld();
 
   const createTabs = function (tabsClass, contentsClass) {
     const tabs = document.getElementsByClassName(tabsClass);

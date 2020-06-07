@@ -220,88 +220,95 @@
       <div class="finishing__body">
         <h2 class="section-title">Закажите отделку балкона со скидкой 60%!</h2>
 
-        <ul class="finishing__tabs">
-          <li class="finishing__tab">
-            <button class="finishing__btn">Внутренняя отделка</button>
-          </li>
-          
-          <li class="finishing__tab">
-            <button class="finishing__btn">Внешняя отделка</button>
-          </li>
-          
-          <li class="finishing__tab">
-            <button class="finishing__btn">Выносное остекление</button>
-          </li>
-          
-          <li class="finishing__tab">
-            <button class="finishing__btn">Крыша на балкон</button>
-          </li>
-        </ul>
+        <div class="finishing__slider slider">
+          <ul class="finishing__tabs">
+            <li class="finishing__tab">
+              <button class="finishing__btn">Внутренняя отделка</button>
+            </li>
+            
+            <li class="finishing__tab">
+              <button class="finishing__btn">Внешняя отделка</button>
+            </li>
+            
+            <li class="finishing__tab">
+              <button class="finishing__btn">Выносное остекление</button>
+            </li>
+            
+            <li class="finishing__tab">
+              <button class="finishing__btn">Крыша на балкон</button>
+            </li>
+          </ul>
+
+          <div class="slider__buttons">
+            <button class="slider__prev"><</button>
+            <button class="slider__next">></button>
+          </div>
+        </div>
 
         <div class="finishing__row">
           <ul class="finishing__content">
             <li class="interior finishing__item fade">
-              <picture>
+              <picture class="interior__preview finishing__preview">
                 <source srcset="img/interior/preview.webp" type="image/webp">
-                <img class="interior__preview" src="img/interior/preview.jpg" alt="Пример внутренней отделки">
+                <img src="img/interior/preview.jpg" alt="Пример внутренней отделки">
               </picture>
 
               <ul class="interior__list">
                 <li class="interior__item">
-                  <picture>
+                  <picture class="interior__img">
                     <source srcset="img/interior/wooden-boards.webp" type="image/webp">
-                    <img class="interior__img" src="img/interior/wooden-boards.png" alt="Пример вагонки">
+                    <img src="img/interior/wooden-boards.png" alt="Пример вагонки">
                   </picture>
                   <h4 class="interior__title">Вагонка</h4>
-                  <p class="price price_margin">
+                  <p class="price interior__price">
                     <span>600 руб. кв.м.</span><br>
                      с материалом
                     </p>
                 </li>
 
                 <li class="interior__item">
-                  <picture>
+                  <picture class="interior__img">
                     <source srcset="img/interior/plastic-boards.webp" type="image/webp">
-                    <img class="interior__img" src="img/interior/plastic-boards.png" alt="Пример пластиковой вагонки">
+                    <img src="img/interior/plastic-boards.png" alt="Пример пластиковой вагонки">
                   </picture>
-                  <h4 class="interior__title">Пластиковая вагонка</h4>
-                  <p class="price price_margin">
+                  <h4 class="interior__title">Пластиковая <br> вагонка</h4>
+                  <p class="price interior__price">
                     <span>750 руб. кв.м.</span><br>
                     с материалом
                   </p>
                 </li>
 
                 <li class="interior__item">
-                  <picture>
+                  <picture class="interior__img">
                     <source srcset="img/interior/pvc.webp" type="image/webp">
-                    <img class="interior__img" src="img/interior/pvc.png" alt="Пример ПВХ-панели">
+                    <img src="img/interior/pvc.png" alt="Пример ПВХ-панели">
                   </picture>
                   <h4 class="interior__title">ПВХ-панели</h4>
-                  <p class="price price_margin">
+                  <p class="price interior__price">
                     <span>800 руб. кв.м.</span><br>
                     с материалом
                   </p>
                 </li>
 
                 <li class="interior__item">
-                  <picture>
+                  <picture class="interior__img">
                     <source srcset="img/interior/laminate-flooring.webp" type="image/webp">
-                    <img class="interior__img" src="img/interior/laminate-flooring.png" alt="Пример настила пола из ламината">
+                    <img src="img/interior/laminate-flooring.png" alt="Пример настила пола из ламината">
                   </picture>
                   <h4 class="interior__title">Настил пола из ламината</h4>
-                  <p class="price price_margin">
+                  <p class="price interior__price">
                     <span>1250 руб. кв.м.</span><br>
                     с материалом
                   </p>
                 </li>
 
                 <li class="interior__item">
-                  <picture>
+                  <picture class="interior__img">
                     <source srcset="img/interior/wooden-flooring.webp" type="image/webp">
-                    <img class="interior__img" src="img/interior/wooden-flooring.png" alt="Пример настила пола из ламината">
+                    <img src="img/interior/wooden-flooring.png" alt="Пример настила пола из ламината">
                   </picture>
                   <h4 class="interior__title">Настил пола из дерева</h4>
-                  <p class="price price_margin">
+                  <p class="price interior__price">
                     <span>1650 руб. кв.м.</span><br>
                     с материалом
                   </p>
@@ -311,9 +318,9 @@
             <!-- /.interior -->
 
             <li class="colors finishing__item fade">
-              <picture>
+              <picture class="colors__preview finishing__preview">
                 <source srcset="img/colors/preview.webp" type="image/webp">
-                <img class="colors__preview" src="img/colors/preview.jpg" alt="Виниловый сайдинг в белом цвете">
+                <img src="img/colors/preview.jpg" alt="Виниловый сайдинг в белом цвете">
               </picture>
 
               <div class="colors__content">
@@ -371,7 +378,7 @@
                   </li>
                 </ul>
 
-                <p class="price price_margin">
+                <p class="price colors__price">
                   <span>1 800 руб./м2</span><br>
                   с материалом
                 </p>
@@ -380,9 +387,9 @@
             <!-- /.colors -->
 
             <li class="remote finishing__item fade">
-              <picture>
+              <picture class="remote__preview finishing__preview">
                 <source srcset="img/remote/preview.webp" type="image/webp">
-                <img class="remote__preview" src="img/remote/preview.jpg" alt="Пример остекления балкона с выносом">
+                <img src="img/remote/preview.jpg" alt="Пример остекления балкона с выносом">
               </picture>
 
               <div class="remote__content">
@@ -394,7 +401,7 @@
                   <li class="remote__item remote__item_thermometr">Дополнительная теплоизоляция</li>
                 </ul>
 
-                <p class="price price_margin">
+                <p class="price remote__price">
                   <span>1 800 руб./м2</span><br>
                   с материалом
                 </p>
@@ -403,9 +410,9 @@
             <!-- /.remote -->
 
             <li class="installation finishing__item fade">
-              <picture>
+              <picture class="installation__preview finishing__preview">
                 <source srcset="img/installation/preview.webp" type="image/webp">
-                <img class="installation__preview" src="img/installation/preview.jpg" alt="Пример монтажа крыши">
+                <img src="img/installation/preview.jpg" alt="Пример монтажа крыши">
               </picture>
 
               <div class="installation__content">
@@ -429,12 +436,12 @@
                   </li>
                 </ul>
 
-                <p class="price price_margin">
+                <p class="price installation__price price_margin">
                   <span>1 800 руб./м2</span><br>
                   На деревянной обрешетке
                 </p>
 
-                <p class="price price_margin">
+                <p class="price installation__price price_margin">
                   <span>1 800 руб./м2</span><br>
                   На металлической платформе
                 </p>
@@ -453,15 +460,15 @@
           </ul>
 
           <form class="form finishing__form form_scale" action="#">
-            <p class="form__text">Запишитесь сегодня на
+            <p class="form__text finishing__text">Запишитесь сегодня на
               <span>бесплатный замер</span>
             </p>
           
-            <input class="form__input" type="text" placeholder="Введите ваше имя">
-            <input class="form__input" type="text" placeholder="+7 (___) ___-__-__">
-            <button class="btn callback-btn"><span>Вызвать замерщика!</span></button>
+            <input class="form__input finishing__input" type="text" placeholder="Введите ваше имя">
+            <input class="form__input finishing__input" type="text" placeholder="+7 (___) ___-__-__">
+            <button class="btn form__btn finishing__form-btn callback-btn"><span>Вызвать замерщика!</span></button>
           
-            <p class="form__comment">Ваши данные конфиденциальны</p>
+            <p class="form__comment finishing__comment">Ваши данные конфиденциальны</p>
           </form>
           <!-- /.form -->
         </div>

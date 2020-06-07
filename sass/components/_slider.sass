@@ -4,13 +4,17 @@
   &__track
     overflow: hidden
     justify-content: flex-start
-    margin: 0 3.89em
+    margin-right: 3.89em
+    margin-left: 3.89em
 
     @media screen and (max-width: 500px)
-      margin: 0 3.5em
+      margin-right: 3.5em
+      margin-left: 3.5em
 
   &__item
+    flex-basis: auto
     flex-shrink: 0;
+    transition: all 0.3s
 
   &__buttons
     display: none
