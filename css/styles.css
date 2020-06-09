@@ -2185,12 +2185,20 @@ ul {
 }
 
 .our-jobs {
-  display: none;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  padding: 7rem 0 5rem;
+  font-size: 2rem;
+  padding: 3.5em 0 2.5em;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .our-jobs {
+    padding: 2.5em 0 2.5em;
+  }
 }
 
 .our-jobs__list {
@@ -2201,18 +2209,42 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 10rem;
+  margin-top: 5em;
+  margin-right: -3%;
+}
+
+@media screen and (max-width: 1000px) {
+  .our-jobs__list {
+    margin-top: 3.5em;
+  }
 }
 
 .our-jobs__item {
+  -ms-flex-preferred-size: 22%;
+      flex-basis: 22%;
   position: relative;
-  width: 27rem;
-  height: 27rem;
-  margin-bottom: 3rem;
+  max-width: 13.5em;
+  width: 100%;
+  height: 13.5em;
+  margin-right: 3%;
+  margin-bottom: 1.5em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .our-jobs__item {
+    -ms-flex-preferred-size: 30.33%;
+        flex-basis: 30.33%;
+    height: 12.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .our-jobs__item {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    height: 11em;
+  }
 }
 
 .our-jobs__item::after {
@@ -2221,8 +2253,8 @@ ul {
   top: 50%;
   left: 50%;
   display: inline-block;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 2.25em;
+  height: 2.25em;
   background-image: url(../img/zoom.svg);
   background-size: contain;
   -webkit-transform: translate(-30%, -30%);
@@ -2255,7 +2287,7 @@ ul {
   height: inherit;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 0.5em;
 }
 
 .features {
