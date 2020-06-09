@@ -2363,7 +2363,9 @@ ul {
 }
 
 .payment {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -2374,7 +2376,13 @@ ul {
 .payment__title {
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 7rem;
+  margin-bottom: 2.33em;
+}
+
+@media screen and (max-width: 800px) {
+  .payment__title {
+    font-size: 2.5rem;
+  }
 }
 
 .payment__list {
@@ -2386,22 +2394,43 @@ ul {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 800px) {
+  .payment__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin-left: 20%;
+  }
+}
+
 .payment__item {
+  -ms-flex-preferred-size: 31%;
+      flex-basis: 31%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 3%;
+}
+
+.payment__item:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .payment__item {
+    margin-right: 0;
+    margin-bottom: 1.5em;
+  }
 }
 
 .payment__img {
-  width: 7rem;
-  margin-right: 2rem;
-}
-
-.payment__text {
-  font-size: 2rem;
+  width: 3.5em;
+  margin-right: 1em;
 }
 
 .discount {
