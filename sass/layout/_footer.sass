@@ -1,9 +1,15 @@
 .footer
-  display: none
-  // display: flex
+  display: flex
   justify-content: space-between
   align-items: center
   padding: 4rem 0
+
+  @media screen and (max-width: 600px)
+    padding: 2rem 0
+
+  &__logo
+    @media screen and (max-width: 600px)
+      display: none
 
   &__links
     text-align: right
