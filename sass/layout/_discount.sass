@@ -1,5 +1,4 @@
 .discount
-  display: none
   background-color: $gray
   background-position: center
   background-size: cover
@@ -9,18 +8,46 @@
     justify-content: space-between
     padding: 8rem 0
 
+    @media screen and (max-width: 800px)
+      flex-flow: column nowrap
+      align-items: center
+      padding: 6rem 0
+
   &__content
     display: flex
     flex-flow: column nowrap
     justify-content: space-between
+    margin-right: 2rem
+
+    @media screen and (max-width: 800px)
+      align-items: center
+      text-align: center
+      margin-right: 0
+      margin-bottom: 3rem
 
   &__title
     font-size: 5rem
     color: $active-color
     text-transform: uppercase
 
+    @media screen and (max-width: 800px)
+      margin-bottom: 3rem
+
   &__text
     font-size: 2.5rem
+
+    @media screen and (max-width: 800px)
+      font-weight: bold
+
+  &__countdown
+    @media screen and (max-width: 800px)
+      display: none
+
+  &__form
+    flex-shrink: 0
+
+    @media screen and (max-width: 800px)
+      font-size: 4vw
 
 .no-webp .discount
   background-image: url(../img/discount/bg.jpg)
