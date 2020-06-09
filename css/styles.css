@@ -2291,7 +2291,6 @@ ul {
 }
 
 .features {
-  display: none;
   background-color: #2e9aff;
 }
 
@@ -2318,8 +2317,8 @@ ul {
 }
 
 .features__item {
-  -ms-flex-preferred-size: 33.333333333333333%;
-      flex-basis: 33.333333333333333%;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2334,17 +2333,33 @@ ul {
   font-size: 1.7rem;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 7rem;
+  margin-bottom: 4.12em;
+}
+
+@media screen and (max-width: 700px) {
+  .features__item {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+  .features__item:nth-child(2n) {
+    margin-left: 4%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .features__item {
+    font-size: 1.5rem;
+  }
 }
 
 .features__img {
-  height: 8rem;
+  height: 4.71em;
   width: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.18em;
 }
 
 .features__text {
-  max-width: 18rem;
+  max-width: 10.59em;
 }
 
 .payment {
